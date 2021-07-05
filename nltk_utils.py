@@ -3,13 +3,15 @@ import numpy as np
 from nltk.stem.porter import PorterStemmer
 from nltk.tokenize.stanford_segmenter import StanfordSegmenter 
 # nltk.download('punkt') #english tokenization
+from nltk.parse import CoreNLPParser
 
+parser = CoreNLPParser(url='http://localhost:9000')
 
 stemmer = PorterStemmer()
-segmenter = StanfordSegmenter()
+
 
 def tokenize(sentence):
-    return segmenter.segment(sentence)
+    return list(parser.tokenize(sentence))
     # return nltk.word_tokenize(sentence)
 
 def stem(word):
