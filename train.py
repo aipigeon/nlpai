@@ -8,7 +8,7 @@ from model import NeuralNet
 import pymongo
 from pymongo import MongoClient
 from pymongo import ReturnDocument
-
+from bson import ObjectId
 
 
 X_train = []
@@ -17,13 +17,19 @@ all_words = []
 tags = []
 xy = []
 
-async def train_data():
+async def train_data(training_id):
+    client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
+    db = client['aipigeondb']
+    collection = db['traininghistory']
+    myquery = { "_id": ObjectId(training_id) }
+    newvalues = { "$set": { "processing": True} }
+    collection.update_one(myquery, newvalues)
     global tags
     global xy
     global all_words
     global X_train
     global Y_train
-    client = MongoClient('mongodb://admin:Aipigeon123@ec2-100-26-194-60.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
+    client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
     db = client['aipigeondb']
     collection = db['intentdata']
     data = collection.find({})
@@ -43,6 +49,8 @@ async def train_data():
 
 
     for (pattern_sentence, tag) in xy:
+        print(pattern_sentence)
+        print(tag)
         bag = bag_of_words(pattern_sentence,all_words)
         X_train.append(bag)
         label = tags.index(tag)
@@ -72,6 +80,13 @@ async def train_data():
     # Loss and optimizer
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+    client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
+    db = client['aipigeondb']
+    collection = db['traininghistory']
+    myquery = { "_id": ObjectId(training_id) }
+    newvalues = { "$set": { "training": True} }
+    collection.update_one(myquery, newvalues)
 
     # Train the model
     for epoch in range(num_epochs):
@@ -107,7 +122,12 @@ async def train_data():
     FILE = "data.pth"
     torch.save(data, FILE)
 
-    print(f'training complete. file saved to {FILE}')
+    client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
+    db = client['aipigeondb']
+    collection = db['traininghistory']
+    myquery = { "_id": ObjectId(training_id) }
+    newvalues = { "$set": { "completed": True} }
+    collection.update_one(myquery, newvalues)
     return
 
 class ChatDataset(Dataset):

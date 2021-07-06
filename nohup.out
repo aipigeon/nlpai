@@ -5,3 +5,833 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     127.0.0.1:38234 - "POST /detect HTTP/1.1" 200 OK
 INFO:     127.0.0.1:38240 - "POST /detect HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38250 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38252 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38262 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38264 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38266 - "GET /detect HTTP/1.0" 405 Method Not Allowed
+INFO:     127.0.0.1:38268 - "GET /detect HTTP/1.0" 405 Method Not Allowed
+INFO:     127.0.0.1:38270 - "GET /detect HTTP/1.0" 405 Method Not Allowed
+INFO:     127.0.0.1:38272 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38286 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38288 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38290 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38292 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38296 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38298 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38308 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38310 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38314 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38316 - "GET /solr/ HTTP/1.0" 404 Not Found
+INFO:     ('5.192.142.90', 0) - "WebSocket /train" [accepted]
+3374 2548
+final loss: 8.2591
+final loss: 7.6907
+final loss: 7.9852
+final loss: 7.3921
+final loss: 7.5168
+final loss: 7.6418
+final loss: 5.7509
+final loss: 5.7254
+final loss: 6.9397
+final loss: 6.9687
+final loss: 5.1747
+final loss: 6.2853
+final loss: 6.3649
+final loss: 6.3043
+final loss: 7.3533
+final loss: 6.9384
+final loss: 6.0518
+final loss: 5.2446
+final loss: 5.4449
+final loss: 6.5572
+final loss: 3.5529
+final loss: 5.0746
+final loss: 5.4141
+final loss: 3.5162
+final loss: 7.3196
+final loss: 3.2586
+final loss: 5.7314
+final loss: 3.6980
+final loss: 5.7622
+final loss: 7.6857
+final loss: 4.7042
+final loss: 4.4350
+final loss: 5.5305
+final loss: 3.9049
+final loss: 4.0240
+final loss: 4.8722
+final loss: 4.6726
+final loss: 5.2184
+final loss: 3.2144
+final loss: 3.3106
+final loss: 1.5526
+final loss: 1.8710
+final loss: 6.3013
+final loss: 4.6704
+final loss: 3.9461
+final loss: 2.8782
+final loss: 3.0204
+final loss: 0.4430
+final loss: 4.7550
+final loss: 1.2044
+final loss: 0.1635
+final loss: 0.0195
+final loss: 1.2622
+final loss: 0.0542
+final loss: 1.1308
+final loss: 3.4095
+final loss: 1.4546
+final loss: 2.7078
+final loss: 1.5188
+final loss: 0.5910
+final loss: 0.0337
+final loss: 1.3300
+final loss: 0.5322
+final loss: 0.5968
+final loss: 0.7913
+final loss: 0.4005
+final loss: 0.5078
+final loss: 1.1500
+final loss: 0.8848
+final loss: 0.6776
+final loss: 1.4871
+final loss: 1.4077
+final loss: 1.0113
+final loss: 0.0687
+final loss: 0.0500
+final loss: 0.0067
+final loss: 0.1946
+final loss: 1.8802
+final loss: 0.1401
+final loss: 0.4849
+final loss: 0.2838
+final loss: 0.4921
+final loss: 1.3793
+final loss: 0.0064
+final loss: 0.5350
+final loss: 0.0507
+final loss: 0.0309
+final loss: 1.0706
+final loss: 0.0086
+final loss: 0.0120
+final loss: 1.0815
+final loss: 0.2787
+final loss: 0.4092
+final loss: 1.0306
+final loss: 0.0058
+final loss: 0.2129
+final loss: 0.0526
+final loss: 0.0072
+final loss: 0.0238
+Error in closing handshake
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/protocol.py", line 750, in transfer_data
+    message = await self.read_message()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/protocol.py", line 819, in read_message
+    frame = await self.read_data_frame(max_size=self.max_size)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/protocol.py", line 895, in read_data_frame
+    frame = await self.read_frame(max_size)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/protocol.py", line 975, in read_frame
+    extensions=self.extensions,
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/framing.py", line 55, in read
+    data = await reader(2)
+  File "/usr/lib/python3.6/asyncio/streams.py", line 672, in readexactly
+    raise IncompleteReadError(incomplete, n)
+asyncio.streams.IncompleteReadError: 0 bytes read on a total of 2 expected bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/server.py", line 301, in handler
+    await self.close()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/protocol.py", line 602, in close
+    loop=self.loop if sys.version_info[:2] < (3, 8) else None,
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 358, in wait_for
+    return fut.result()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/protocol.py", line 1025, in write_close_frame
+    await self.write_frame(True, OP_CLOSE, data, _expected_state=State.CLOSING)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/protocol.py", line 1007, in write_frame
+    await self.ensure_open()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/websockets/legacy/protocol.py", line 726, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedError: code = 1006 (connection closed abnormally [internal]), no reason
+Epoch [100/100], Loss: 0.1253
+final loss: 0.1253
+training complete. file saved to data.pth
+INFO:     127.0.0.1:38326 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38328 - "GET /owa/auth/logon.aspx HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38330 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38332 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38334 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38336 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38338 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38340 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38342 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38344 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38348 - "POST /detect HTTP/1.0" 200 OK
+INFO:     ('5.192.142.90', 0) - "WebSocket /train" [accepted]
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/websockets/websockets_impl.py", line 171, in run_asgi
+    result = await self.app(self.scope, self.asgi_receive, self.asgi_send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 146, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 70, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 58, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 68, in app
+    await func(session)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 260, in app
+    await dependant.call(**values)
+  File "./main.py", line 100, in websocket_endpoint
+    await train_data()
+  File "./train.py", line 47, in train_data
+    X_train.append(bag)
+AttributeError: 'numpy.ndarray' object has no attribute 'append'
+INFO:     127.0.0.1:38358 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38360 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38374 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38378 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38380 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38382 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38386 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38388 - "POST /detect HTTP/1.0" 200 OK
+INFO:     ('5.192.142.90', 0) - "WebSocket /train" [accepted]
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/websockets/websockets_impl.py", line 171, in run_asgi
+    result = await self.app(self.scope, self.asgi_receive, self.asgi_send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 146, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 70, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 58, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 68, in app
+    await func(session)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 260, in app
+    await dependant.call(**values)
+  File "./main.py", line 100, in websocket_endpoint
+    await train_data()
+  File "./train.py", line 47, in train_data
+    X_train.append(bag)
+AttributeError: 'numpy.ndarray' object has no attribute 'append'
+INFO:     127.0.0.1:38396 - "GET /owa/ HTTP/1.0" 404 Not Found
+INFO:     ('5.192.142.90', 0) - "WebSocket /train" [accepted]
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/websockets/websockets_impl.py", line 171, in run_asgi
+    result = await self.app(self.scope, self.asgi_receive, self.asgi_send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 146, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 70, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 58, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 68, in app
+    await func(session)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 260, in app
+    await dependant.call(**values)
+  File "./main.py", line 100, in websocket_endpoint
+    await train_data()
+  File "./train.py", line 47, in train_data
+    X_train.append(bag)
+AttributeError: 'numpy.ndarray' object has no attribute 'append'
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8837]
+INFO:     Started server process [12873]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12873]
+INFO:     Started server process [12878]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] Address already in use
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12878]
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [12914] using statreload
+INFO:     Started server process [12916]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12916]
+INFO:     Started server process [12925]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12925]
+INFO:     Started server process [12931]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12931]
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [12939] using statreload
+INFO:     Started server process [12941]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     ('5.192.142.90', 0) - "WebSocket /train" [accepted]
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/websockets/websockets_impl.py", line 171, in run_asgi
+    result = await self.app(self.scope, self.asgi_receive, self.asgi_send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 146, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 70, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 58, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 68, in app
+    await func(session)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 260, in app
+    await dependant.call(**values)
+  File "./main.py", line 100, in websocket_endpoint
+    await train_data()
+  File "./train.py", line 59, in train_data
+    input_size = len(X_train[0])
+IndexError: index 0 is out of bounds for axis 0 with size 0
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12941]
+INFO:     Started server process [13535]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13535]
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Started server process [13545]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13545]
+INFO:     Started server process [13550]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13550]
+INFO:     Started server process [13555]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13555]
+INFO:     Started server process [13560]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'train.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13560]
+INFO:     Started server process [13565]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13565]
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [17322] using statreload
+INFO:     Started server process [17324]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:38590 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38594 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38596 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38598 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38608 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38610 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38622 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38632 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38634 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38636 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38638 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38648 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38658 - "GET /.env HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38660 - "POST / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38672 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38698 - "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38700 - "POST /api/jsonws/invoke HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38702 - "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38704 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38706 - "GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38708 - "GET /_ignition/execute-solution HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38710 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38712 - "POST /mifs/.%3B/services/LogService HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38714 - "GET /console/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38716 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38718 - "POST /Autodiscover/Autodiscover.xml HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38720 - "GET /wp-content/plugins/wp-file-manager/readme.txt HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38738 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38740 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38742 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38752 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38764 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38774 - "GET /actuator/health HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38794 - "GET /.env HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:38796 - "POST / HTTP/1.0" 404 Not Found
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [17324]
+INFO:     Started server process [22266]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22266]
+INFO:     Started server process [22278]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22278]
+INFO:     Started server process [22283]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22283]
+INFO:     Started server process [22288]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22288]
+INFO:     Started server process [22297]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22297]
+INFO:     Started server process [22302]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22302]
+Process SpawnProcess-8:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 50, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 484, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 57, in serve
+    config.load()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/config.py", line 318, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./main.py", line 103
+    @
+    ^
+SyntaxError: invalid syntax
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+Process SpawnProcess-9:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 50, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 484, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 57, in serve
+    config.load()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/config.py", line 318, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./main.py", line 104
+    async def
+             ^
+SyntaxError: invalid syntax
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+Process SpawnProcess-10:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 50, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 484, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 57, in serve
+    config.load()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/config.py", line 318, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./main.py", line 109
+    if __name__ == "__main__":
+     ^
+IndentationError: expected an indented block
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Started server process [22322]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22322]
+INFO:     Started server process [22327]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22327]
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Started server process [22337]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22337]
+INFO:     Started server process [22347]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22347]
+INFO:     Started server process [22352]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22352]
+INFO:     Started server process [22357]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22357]
+INFO:     Started server process [22362]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22362]
+Process SpawnProcess-19:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 50, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 484, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 57, in serve
+    config.load()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/config.py", line 318, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./main.py", line 110
+    ipaddress = formdata['ipaddress']
+    ^
+IndentationError: unexpected indent
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+Process SpawnProcess-20:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 50, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 484, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 57, in serve
+    config.load()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/config.py", line 318, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./main.py", line 108
+    formdata = (await request.form())
+    ^
+IndentationError: unexpected indent
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+Process SpawnProcess-21:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 50, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 484, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/server.py", line 57, in serve
+    config.load()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/config.py", line 318, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./main.py", line 110
+    ipaddress = formdata['ipaddress']
+    ^
+IndentationError: unexpected indent
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Started server process [22371]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22371]
+INFO:     Started server process [22377]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22377]
+INFO:     Started server process [22382]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22382]
+INFO:     Started server process [22388]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22388]
+INFO:     Started server process [22393]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22393]
+INFO:     Started server process [22401]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22401]
+INFO:     Started server process [22407]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22407]
+INFO:     Started server process [22412]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22412]
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Started server process [22425]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected file change in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22425]
+INFO:     Started server process [22443]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22443]
+INFO:     Started server process [23292]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)

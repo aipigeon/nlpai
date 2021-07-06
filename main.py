@@ -37,7 +37,7 @@ AWS_ACCESS_KEY_ID = "AKIA3CEIQSFDTE2RKTEJ"
 AWS_SECRET_ACCESS_KEY = "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"
 AWS_REGION = "us-east-1"
 
-MONGO_DB_URL = 'mongodb://admin:Aipigeon123@ec2-100-26-194-60.compute-1.amazonaws.com:27017/admin?authSource=admin'
+MONGO_DB_URL = 'mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin'
 MONGO_DB_NAME = 'aipigeondb'
 COLLECTION_INTENT_DATA = 'intentdata'
 
@@ -93,17 +93,35 @@ async def getintentresponse(request: Request):
 
 
 
-@app.websocket("/train")
-async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
-    await websocket.send_text('Training Started')
-    await train_data()
-    await websocket.send_text('Training Completed')
+# @app.websocket("/train")
+# async def websocket_endpoint(websocket: WebSocket):
+#     await websocket.accept()
+#     await websocket.send_text('Training Started')
+#     await train_data()
+#     await websocket.send_text('Training Completed')
 
+
+
+@app.post('/data/train')
+async def traindata(request: Request, background_tasks: BackgroundTasks):
+    client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
+    db = client['aipigeondb']
+    collection = db['traininghistory']
+    formdata = (await request.form())
+    userid = formdata['userid']
+    ipaddress = formdata['ipaddress']
+    lasthistory = collection.find({}).sort('_id',-1).limit(1)
+    if 'completed' in lasthistory[0]:
+        mydict = { "request_recieved": True, "userid": userid,"ipaddress":ipaddress,"date": datetime.now(pytz.timezone('Asia/Dubai'))}
+        collection.insert_one(mydict)
+        background_tasks.add_task(train_data, mydict['_id'])
+        return Response(content=dumps('Training Requested'), media_type="application/json")
+    else:
+        return Response(content=dumps('Training In Progress'), media_type="application/json")
+        
 
 
 if __name__ == "__main__":
-    #uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
 
