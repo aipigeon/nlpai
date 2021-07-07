@@ -30,6 +30,13 @@ import torch
 from json import dumps
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+from typing import Dict
+import asyncio
+from concurrent.futures.process import ProcessPoolExecutor
+from http import HTTPStatus
+from uuid import UUID, uuid4
+from pydantic import BaseModel, Field
+
 
 app = FastAPI()
 
@@ -55,12 +62,42 @@ app.add_middleware(
 )
 
 
+
+
+class Job(BaseModel):
+    uid: UUID = Field(default_factory=uuid4)
+    status: str = "in_progress"
+    result: int = None
+
+jobs: Dict[UUID, Job] = {}
+
+
+
+async def run_in_process(fn, *args):
+    loop = asyncio.get_event_loop()
+    return await loop.run_in_executor(app.state.executor, fn, *args)  # wait and return result
+
+
+async def start_cpu_bound_task(mydict: dict, uid: UUID) -> None:
+    jobs[uid].result = await run_in_process(train_data, mydict)
+    jobs[uid].status = "complete"
+
+
+@app.on_event("startup")
+async def startup_event():
+    app.state.executor = ProcessPoolExecutor()
+
+
+@app.on_event("shutdown")
+async def on_shutdown():
+    app.state.executor.shutdown()
+
 @app.post('/detect')
 async def getintentresponse(request: Request):
     formdata = (await request.form())
     question = formdata['question']
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    FILE = "data.pth"
+    FILE = "/home/ubuntu/ai/models/model.pth"
     data = torch.load(FILE)
 
     input_size = data["input_size"]
@@ -114,7 +151,9 @@ async def traindata(request: Request, background_tasks: BackgroundTasks):
     if 'completed' in lasthistory[0]:
         mydict = { "request_recieved": True, "userid": userid,"ipaddress":ipaddress,"date": datetime.now(pytz.timezone('Asia/Dubai'))}
         collection.insert_one(mydict)
-        background_tasks.add_task(train_data, mydict['_id'])
+        new_task = Job()
+        jobs[new_task.uid] = new_task
+        background_tasks.add_task( start_cpu_bound_task ,mydict['_id'],new_task.uid)
         return Response(content=dumps('Training Requested'), media_type="application/json")
     else:
         return Response(content=dumps('Training In Progress'), media_type="application/json")

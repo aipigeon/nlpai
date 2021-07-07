@@ -17,7 +17,7 @@ all_words = []
 tags = []
 xy = []
 
-async def train_data(training_id):
+def train_data(training_id):
     client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
     db = client['aipigeondb']
     collection = db['traininghistory']
@@ -29,6 +29,11 @@ async def train_data(training_id):
     global all_words
     global X_train
     global Y_train
+    X_train = []
+    Y_train = []
+    all_words = []
+    tags = []
+    xy = []
     client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
     db = client['aipigeondb']
     collection = db['intentdata']
@@ -41,16 +46,12 @@ async def train_data(training_id):
             all_words.extend(w)
             xy.append((w,tag))
         
-    ignore_words = ['?', '!','.',',']
+    ignore_words = ['.',',']
     all_words = [stem(w) for w in all_words if w not in ignore_words]
     all_words = sorted(set(all_words))
     tags = sorted(set(tags))
 
-
-
     for (pattern_sentence, tag) in xy:
-        print(pattern_sentence)
-        print(tag)
         bag = bag_of_words(pattern_sentence,all_words)
         X_train.append(bag)
         label = tags.index(tag)
@@ -61,7 +62,7 @@ async def train_data(training_id):
 
 
     # Hyper-parameters 
-    num_epochs = 100
+    num_epochs = 200
     batch_size = 8
     learning_rate = 0.001
     input_size = len(X_train[0])
@@ -119,16 +120,19 @@ async def train_data(training_id):
     "tags": tags
     }
 
-    FILE = "data.pth"
-    torch.save(data, FILE)
-
+    FILE = "/home/ubuntu/ai/models/model.pth"
     client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
     db = client['aipigeondb']
     collection = db['traininghistory']
     myquery = { "_id": ObjectId(training_id) }
     newvalues = { "$set": { "completed": True} }
     collection.update_one(myquery, newvalues)
-    return
+    
+    
+    torch.save(data, FILE)
+    print('Model Saved')
+
+    return 'Done'
 
 class ChatDataset(Dataset):
 
