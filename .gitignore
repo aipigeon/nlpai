@@ -2,3 +2,4 @@ __pycache__
 aienv
 data.pth
 stanford*
+models

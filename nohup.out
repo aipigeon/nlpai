@@ -835,3 +835,3670 @@ INFO:     Started server process [23292]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started server process [17445]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:41712 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:41714 - "POST /detect HTTP/1.0" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 215, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 149, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./main.py", line 101, in getintentresponse
+    data = torch.load(FILE)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/ai/models/model.pth'
+INFO:     Started server process [17665]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:41722 - "POST /detect HTTP/1.0" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 215, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 149, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./main.py", line 101, in getintentresponse
+    data = torch.load(FILE)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'models/model.pth'
+INFO:     127.0.0.1:41724 - "POST /data/train HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41740 - "POST /detect HTTP/1.0" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 215, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 149, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./main.py", line 101, in getintentresponse
+    data = torch.load(FILE)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'models/model.pth'
+INFO:     127.0.0.1:41742 - "POST /data/train HTTP/1.0" 200 OK
+8962 6327
+final loss: 8.8959
+final loss: 8.9326
+final loss: 9.3937
+final loss: 7.7142
+final loss: 7.6789
+final loss: 8.6591
+final loss: 8.8878
+final loss: 7.4819
+final loss: 7.4603
+final loss: 7.9066
+final loss: 7.7676
+final loss: 4.5256
+final loss: 7.6593
+final loss: 6.1489
+final loss: 6.7059
+final loss: 5.3775
+final loss: 3.8774
+final loss: 4.7175
+final loss: 5.0189
+final loss: 3.8716
+final loss: 5.5203
+final loss: 5.4145
+final loss: 4.9502
+final loss: 3.0160
+final loss: 2.2663
+final loss: 4.8722
+final loss: 3.7864
+final loss: 2.4863
+final loss: 3.0753
+final loss: 0.5632
+final loss: 2.6218
+final loss: 1.5281
+final loss: 2.5550
+final loss: 3.6911
+final loss: 2.7763
+final loss: 2.4559
+final loss: 2.8114
+final loss: 1.1063
+final loss: 4.4172
+final loss: 1.3877
+final loss: 0.2172
+final loss: 1.0877
+final loss: 1.3300
+final loss: 0.5531
+final loss: 2.4560
+final loss: 0.4928
+final loss: 1.9954
+final loss: 2.2343
+final loss: 1.9109
+final loss: 1.2595
+final loss: 3.4451
+final loss: 1.8518
+final loss: 2.7782
+final loss: 1.4525
+final loss: 3.1379
+final loss: 0.3600
+final loss: 0.6503
+final loss: 0.5710
+final loss: 1.9239
+final loss: 0.0996
+final loss: 0.5372
+final loss: 0.7073
+final loss: 0.2209
+final loss: 0.2616
+final loss: 1.0162
+final loss: 0.2025
+final loss: 0.2224
+final loss: 0.2077
+final loss: 0.2525
+final loss: 2.0877
+final loss: 0.0007
+final loss: 0.0202
+final loss: 0.0763
+final loss: 0.2072
+final loss: 0.3931
+final loss: 0.0206
+final loss: 0.2204
+final loss: 0.1218
+INFO:     127.0.0.1:41776 - "GET / HTTP/1.0" 404 Not Found
+final loss: 2.0572
+final loss: 1.1602
+final loss: 0.0490
+final loss: 0.0005
+final loss: 0.1087
+final loss: 0.2393
+final loss: 0.0237
+final loss: 2.5922
+final loss: 2.4215
+final loss: 0.1574
+final loss: 0.0132
+final loss: 0.0747
+final loss: 0.0057
+final loss: 0.0517
+final loss: 1.3553
+final loss: 0.0620
+final loss: 2.5817
+final loss: 0.0686
+final loss: 0.0244
+final loss: 0.0027
+final loss: 0.1004
+Epoch [100/200], Loss: 0.0549
+final loss: 0.0549
+final loss: 0.2262
+final loss: 0.0075
+final loss: 0.0429
+final loss: 0.0177
+final loss: 0.0027
+final loss: 1.0275
+final loss: 0.0221
+final loss: 0.0146
+final loss: 0.0009
+final loss: 3.2904
+final loss: 2.3108
+final loss: 0.2671
+final loss: 0.0240
+final loss: 0.1294
+final loss: 0.0018
+final loss: 0.0054
+final loss: 0.2429
+final loss: 0.0087
+final loss: 0.0106
+final loss: 1.4197
+final loss: 1.9043
+final loss: 0.0088
+final loss: 0.0141
+final loss: 0.0560
+final loss: 2.2162
+final loss: 0.0000
+final loss: 0.0034
+final loss: 0.0624
+final loss: 0.7600
+final loss: 0.0163
+final loss: 0.0202
+final loss: 0.0001
+final loss: 0.0056
+final loss: 0.0194
+final loss: 1.6524
+final loss: 1.0693
+final loss: 0.1280
+final loss: 0.0014
+final loss: 0.0091
+final loss: 2.1717
+final loss: 0.0014
+final loss: 0.0850
+final loss: 0.0034
+final loss: 0.0647
+final loss: 2.3094
+final loss: 0.0115
+final loss: 0.0406
+final loss: 0.0052
+final loss: 0.0024
+final loss: 0.0068
+final loss: 0.0022
+final loss: 0.0057
+final loss: 0.0030
+final loss: 0.0004
+final loss: 0.0011
+final loss: 0.0010
+final loss: 0.6890
+final loss: 0.0102
+final loss: 0.0006
+final loss: 0.0015
+final loss: 0.0022
+final loss: 0.0045
+final loss: 0.0017
+final loss: 0.0008
+final loss: 0.1238
+final loss: 0.0002
+final loss: 0.0685
+final loss: 1.8087
+final loss: 0.0281
+final loss: 0.0012
+final loss: 1.0316
+final loss: 0.0004
+final loss: 0.0010
+final loss: 0.0004
+final loss: 0.0314
+final loss: 0.0039
+final loss: 1.2796
+final loss: 0.0001
+final loss: 0.0043
+final loss: 0.0224
+final loss: 2.5417
+final loss: 0.0029
+final loss: 0.0004
+final loss: 0.0015
+final loss: 0.0037
+final loss: 1.1387
+final loss: 0.0002
+final loss: 0.0004
+final loss: 0.0012
+final loss: 2.2023
+final loss: 0.8973
+final loss: 0.0030
+final loss: 2.3004
+final loss: 0.8720
+final loss: 0.0006
+final loss: 0.0005
+final loss: 0.0128
+final loss: 0.0010
+final loss: 0.0002
+INFO:     127.0.0.1:41782 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41794 - "POST /data/train HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41810 - "POST /data/train HTTP/1.0" 200 OK
+8962 6327
+final loss: 8.8959
+final loss: 8.9326
+final loss: 9.3937
+final loss: 7.7142
+final loss: 7.6789
+final loss: 8.6591
+final loss: 8.8878
+final loss: 7.4819
+final loss: 7.4603
+final loss: 7.9066
+final loss: 7.7676
+final loss: 4.5256
+final loss: 7.6593
+final loss: 6.1489
+final loss: 6.7059
+final loss: 5.3775
+final loss: 3.8774
+final loss: 4.7175
+final loss: 5.0189
+final loss: 3.8716
+final loss: 5.5203
+final loss: 5.4145
+final loss: 4.9502
+final loss: 3.0160
+final loss: 2.2663
+final loss: 4.8722
+final loss: 3.7864
+final loss: 2.4863
+final loss: 3.0753
+final loss: 0.5632
+final loss: 2.6218
+final loss: 1.5281
+final loss: 2.5550
+final loss: 3.6911
+final loss: 2.7763
+final loss: 2.4559
+final loss: 2.8114
+final loss: 1.1063
+final loss: 4.4172
+final loss: 1.3877
+final loss: 0.2172
+final loss: 1.0877
+final loss: 1.3300
+final loss: 0.5531
+final loss: 2.4560
+final loss: 0.4928
+final loss: 1.9954
+final loss: 2.2343
+final loss: 1.9109
+final loss: 1.2595
+final loss: 3.4451
+final loss: 1.8518
+final loss: 2.7782
+final loss: 1.4525
+final loss: 3.1379
+final loss: 0.3600
+final loss: 0.6503
+final loss: 0.5710
+final loss: 1.9239
+final loss: 0.0996
+final loss: 0.5372
+final loss: 0.7073
+INFO:     127.0.0.1:41820 - "POST /data/train HTTP/1.0" 200 OK
+final loss: 0.2209
+final loss: 0.2616
+final loss: 1.0162
+final loss: 0.2025
+final loss: 0.2224
+final loss: 0.2077
+final loss: 0.2525
+final loss: 2.0877
+final loss: 0.0007
+final loss: 0.0202
+final loss: 0.0763
+final loss: 0.2072
+final loss: 0.3931
+INFO:     127.0.0.1:41826 - "POST /data/train HTTP/1.0" 200 OK
+final loss: 0.0206
+final loss: 0.2204
+INFO:     127.0.0.1:41832 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1218
+INFO:     127.0.0.1:41836 - "POST /detect HTTP/1.0" 200 OK
+final loss: 2.0572
+INFO:     127.0.0.1:41838 - "POST /detect HTTP/1.0" 200 OK
+final loss: 1.1602
+final loss: 0.0490
+INFO:     127.0.0.1:41840 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0005
+INFO:     127.0.0.1:41842 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1087
+INFO:     127.0.0.1:41844 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.2393
+final loss: 0.0237
+INFO:     127.0.0.1:41846 - "POST /detect HTTP/1.0" 200 OK
+final loss: 2.5922
+final loss: 2.4215
+INFO:     127.0.0.1:41848 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1574
+final loss: 0.0132
+INFO:     127.0.0.1:41850 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0747
+final loss: 0.0057
+INFO:     127.0.0.1:41860 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0517
+INFO:     127.0.0.1:41862 - "POST /detect HTTP/1.0" 200 OK
+final loss: 1.3553
+final loss: 0.0620
+final loss: 2.5817
+final loss: 0.0686
+INFO:     127.0.0.1:41864 - "GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f HTTP/1.0" 404 Not Found
+final loss: 0.0244
+final loss: 0.0027
+final loss: 0.1004
+Epoch [100/200], Loss: 0.0549
+final loss: 0.0549
+final loss: 0.2262
+final loss: 0.0075
+final loss: 0.0429
+INFO:     127.0.0.1:41866 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0177
+INFO:     127.0.0.1:41870 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0027
+INFO:     127.0.0.1:41872 - "POST /detect HTTP/1.0" 200 OK
+final loss: 1.0275
+final loss: 0.0221
+INFO:     127.0.0.1:41874 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0146
+final loss: 0.0009
+final loss: 3.2904
+INFO:     127.0.0.1:41876 - "POST /detect HTTP/1.0" 200 OK
+final loss: 2.3108
+final loss: 0.2671
+final loss: 0.0240
+INFO:     127.0.0.1:41878 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1294
+INFO:     127.0.0.1:41880 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0018
+final loss: 0.0054
+INFO:     127.0.0.1:41882 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.2429
+final loss: 0.0087
+final loss: 0.0106
+final loss: 1.4197
+INFO:     127.0.0.1:41884 - "POST /detect HTTP/1.0" 200 OK
+final loss: 1.9043
+final loss: 0.0088
+INFO:     127.0.0.1:41888 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41890 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0141
+INFO:     127.0.0.1:41892 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0560
+INFO:     127.0.0.1:41894 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41896 - "POST /detect HTTP/1.0" 200 OK
+final loss: 2.2162
+final loss: 0.0000
+final loss: 0.0034
+final loss: 0.0624
+final loss: 0.7600
+final loss: 0.0163
+final loss: 0.0202
+final loss: 0.0001
+final loss: 0.0056
+final loss: 0.0194
+INFO:     127.0.0.1:41898 - "POST /detect HTTP/1.0" 200 OK
+final loss: 1.6524
+INFO:     127.0.0.1:41902 - "POST /detect HTTP/1.0" 200 OK
+final loss: 1.0693
+final loss: 0.1280
+INFO:     127.0.0.1:41904 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0014
+final loss: 0.0091
+final loss: 2.1717
+INFO:     127.0.0.1:41906 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0014
+final loss: 0.0850
+final loss: 0.0034
+INFO:     127.0.0.1:41908 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0647
+INFO:     127.0.0.1:41910 - "POST /data/train HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41916 - "POST /detect HTTP/1.0" 200 OK
+final loss: 2.3094
+final loss: 0.0115
+final loss: 0.0406
+final loss: 0.0052
+final loss: 0.0024
+final loss: 0.0068
+INFO:     127.0.0.1:41920 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41924 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0022
+INFO:     127.0.0.1:41926 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41930 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41932 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41934 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41936 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41938 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41940 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41942 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41944 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41946 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41948 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41950 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41952 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41954 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0057
+INFO:     127.0.0.1:41956 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41958 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41960 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41962 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41964 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41966 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41968 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41970 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41972 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41974 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41976 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41978 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41980 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0030
+INFO:     127.0.0.1:41982 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0004
+INFO:     127.0.0.1:41984 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41986 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0011
+INFO:     127.0.0.1:41988 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41990 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0010
+INFO:     127.0.0.1:41992 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41994 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41996 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41998 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42000 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42002 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.6890
+INFO:     127.0.0.1:42004 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0102
+INFO:     127.0.0.1:42008 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0006
+final loss: 0.0015
+final loss: 0.0022
+INFO:     127.0.0.1:42012 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0045
+INFO:     127.0.0.1:42016 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0017
+INFO:     127.0.0.1:42018 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42020 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42022 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42024 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42026 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42028 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42030 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42032 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42034 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42036 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42038 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0008
+INFO:     127.0.0.1:42040 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42042 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42044 - "POST /data/train HTTP/1.0" 200 OK
+final loss: 0.1238
+final loss: 0.0002
+final loss: 0.0685
+final loss: 1.8087
+INFO:     127.0.0.1:42050 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42054 - "POST /data/train HTTP/1.0" 200 OK
+final loss: 0.0281
+INFO:     127.0.0.1:42060 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42062 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42064 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42066 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0012
+final loss: 1.0316
+final loss: 0.0004
+final loss: 0.0010
+final loss: 0.0004
+final loss: 0.0314
+final loss: 0.0039
+final loss: 1.2796
+final loss: 0.0001
+final loss: 0.0043
+final loss: 0.0224
+final loss: 2.5417
+final loss: 0.0029
+final loss: 0.0004
+final loss: 0.0015
+final loss: 0.0037
+INFO:     127.0.0.1:42068 - "POST /detect HTTP/1.0" 200 OK
+final loss: 1.1387
+final loss: 0.0002
+final loss: 0.0004
+final loss: 0.0012
+final loss: 2.2023
+final loss: 0.8973
+final loss: 0.0030
+final loss: 2.3004
+final loss: 0.8720
+final loss: 0.0006
+final loss: 0.0005
+final loss: 0.0128
+final loss: 0.0010
+final loss: 0.0002
+INFO:     127.0.0.1:42090 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42092 - "POST /data/train HTTP/1.0" 200 OK
+8962 6327
+final loss: 8.8959
+final loss: 8.9326
+final loss: 9.3937
+final loss: 7.7142
+final loss: 7.6789
+final loss: 8.6591
+final loss: 8.8878
+final loss: 7.4819
+final loss: 7.4603
+final loss: 7.9066
+final loss: 7.7676
+final loss: 4.5256
+final loss: 7.6593
+final loss: 6.1489
+final loss: 6.7059
+final loss: 5.3775
+final loss: 3.8774
+final loss: 4.7175
+final loss: 5.0189
+final loss: 3.8716
+final loss: 5.5203
+final loss: 5.4145
+final loss: 4.9502
+final loss: 3.0160
+final loss: 2.2663
+final loss: 4.8722
+final loss: 3.7864
+final loss: 2.4863
+final loss: 3.0753
+final loss: 0.5632
+final loss: 2.6218
+final loss: 1.5281
+final loss: 2.5550
+final loss: 3.6911
+final loss: 2.7763
+final loss: 2.4559
+final loss: 2.8114
+final loss: 1.1063
+final loss: 4.4172
+final loss: 1.3877
+final loss: 0.2172
+final loss: 1.0877
+final loss: 1.3300
+final loss: 0.5531
+final loss: 2.4560
+final loss: 0.4928
+final loss: 1.9954
+final loss: 2.2343
+final loss: 1.9109
+final loss: 1.2595
+final loss: 3.4451
+final loss: 1.8518
+final loss: 2.7782
+final loss: 1.4525
+final loss: 3.1379
+final loss: 0.3600
+final loss: 0.6503
+final loss: 0.5710
+final loss: 1.9239
+final loss: 0.0996
+final loss: 0.5372
+final loss: 0.7073
+final loss: 0.2209
+final loss: 0.2616
+final loss: 1.0162
+final loss: 0.2025
+final loss: 0.2224
+final loss: 0.2077
+final loss: 0.2525
+final loss: 2.0877
+final loss: 0.0007
+final loss: 0.0202
+final loss: 0.0763
+final loss: 0.2072
+final loss: 0.3931
+final loss: 0.0206
+final loss: 0.2204
+final loss: 0.1218
+final loss: 2.0572
+final loss: 1.1602
+final loss: 0.0490
+final loss: 0.0005
+final loss: 0.1087
+final loss: 0.2393
+final loss: 0.0237
+final loss: 2.5922
+final loss: 2.4215
+final loss: 0.1574
+final loss: 0.0132
+final loss: 0.0747
+final loss: 0.0057
+final loss: 0.0517
+final loss: 1.3553
+final loss: 0.0620
+final loss: 2.5817
+final loss: 0.0686
+final loss: 0.0244
+final loss: 0.0027
+final loss: 0.1004
+Epoch [100/200], Loss: 0.0549
+final loss: 0.0549
+final loss: 0.2262
+final loss: 0.0075
+final loss: 0.0429
+final loss: 0.0177
+final loss: 0.0027
+final loss: 1.0275
+final loss: 0.0221
+final loss: 0.0146
+final loss: 0.0009
+final loss: 3.2904
+final loss: 2.3108
+final loss: 0.2671
+final loss: 0.0240
+final loss: 0.1294
+final loss: 0.0018
+final loss: 0.0054
+INFO:     127.0.0.1:42124 - "GET /owa/ HTTP/1.0" 404 Not Found
+final loss: 0.2429
+final loss: 0.0087
+final loss: 0.0106
+final loss: 1.4197
+final loss: 1.9043
+final loss: 0.0088
+final loss: 0.0141
+final loss: 0.0560
+final loss: 2.2162
+final loss: 0.0000
+final loss: 0.0034
+final loss: 0.0624
+final loss: 0.7600
+final loss: 0.0163
+final loss: 0.0202
+final loss: 0.0001
+final loss: 0.0056
+final loss: 0.0194
+final loss: 1.6524
+final loss: 1.0693
+final loss: 0.1280
+final loss: 0.0014
+final loss: 0.0091
+final loss: 2.1717
+final loss: 0.0014
+final loss: 0.0850
+final loss: 0.0034
+final loss: 0.0647
+final loss: 2.3094
+final loss: 0.0115
+final loss: 0.0406
+final loss: 0.0052
+final loss: 0.0024
+final loss: 0.0068
+final loss: 0.0022
+final loss: 0.0057
+final loss: 0.0030
+final loss: 0.0004
+INFO:     127.0.0.1:42126 - "GET / HTTP/1.0" 404 Not Found
+final loss: 0.0011
+final loss: 0.0010
+final loss: 0.6890
+final loss: 0.0102
+final loss: 0.0006
+final loss: 0.0015
+final loss: 0.0022
+final loss: 0.0045
+final loss: 0.0017
+final loss: 0.0008
+final loss: 0.1238
+final loss: 0.0002
+final loss: 0.0685
+final loss: 1.8087
+final loss: 0.0281
+final loss: 0.0012
+final loss: 1.0316
+final loss: 0.0004
+final loss: 0.0010
+final loss: 0.0004
+final loss: 0.0314
+final loss: 0.0039
+final loss: 1.2796
+final loss: 0.0001
+final loss: 0.0043
+final loss: 0.0224
+final loss: 2.5417
+final loss: 0.0029
+final loss: 0.0004
+final loss: 0.0015
+final loss: 0.0037
+final loss: 1.1387
+final loss: 0.0002
+final loss: 0.0004
+final loss: 0.0012
+final loss: 2.2023
+final loss: 0.8973
+final loss: 0.0030
+final loss: 2.3004
+final loss: 0.8720
+final loss: 0.0006
+final loss: 0.0005
+final loss: 0.0128
+final loss: 0.0010
+final loss: 0.0002
+INFO:     127.0.0.1:42148 - "GET /detect HTTP/1.0" 405 Method Not Allowed
+INFO:     127.0.0.1:42150 - "GET /detect/hi HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42152 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42154 - "POST /detect/ HTTP/1.0" 307 Temporary Redirect
+INFO:     127.0.0.1:42156 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42160 - "POST /detect/ HTTP/1.0" 307 Temporary Redirect
+INFO:     127.0.0.1:42162 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42164 - "POST /detect/ HTTP/1.0" 307 Temporary Redirect
+INFO:     127.0.0.1:42166 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42168 - "POST /detect/ HTTP/1.0" 307 Temporary Redirect
+INFO:     127.0.0.1:42170 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42174 - "POST /detect/ HTTP/1.0" 307 Temporary Redirect
+INFO:     127.0.0.1:42176 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42188 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42192 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42196 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42200 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42204 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42208 - "POST /data/train HTTP/1.0" 200 OK
+8962 6327
+final loss: 8.8959
+final loss: 8.9326
+final loss: 9.3937
+final loss: 7.7142
+final loss: 7.6789
+final loss: 8.6591
+final loss: 8.8878
+final loss: 7.4819
+final loss: 7.4603
+final loss: 7.9066
+final loss: 7.7676
+final loss: 4.5256
+final loss: 7.6593
+final loss: 6.1489
+final loss: 6.7059
+final loss: 5.3775
+final loss: 3.8774
+final loss: 4.7175
+final loss: 5.0189
+final loss: 3.8716
+final loss: 5.5203
+final loss: 5.4145
+final loss: 4.9502
+final loss: 3.0160
+final loss: 2.2663
+final loss: 4.8722
+final loss: 3.7864
+final loss: 2.4863
+final loss: 3.0753
+final loss: 0.5632
+final loss: 2.6218
+final loss: 1.5281
+final loss: 2.5550
+final loss: 3.6911
+final loss: 2.7763
+final loss: 2.4559
+final loss: 2.8114
+final loss: 1.1063
+final loss: 4.4172
+final loss: 1.3877
+final loss: 0.2172
+final loss: 1.0877
+final loss: 1.3300
+final loss: 0.5531
+final loss: 2.4560
+final loss: 0.4928
+final loss: 1.9954
+final loss: 2.2343
+final loss: 1.9109
+final loss: 1.2595
+final loss: 3.4451
+final loss: 1.8518
+final loss: 2.7782
+final loss: 1.4525
+final loss: 3.1379
+final loss: 0.3600
+final loss: 0.6503
+final loss: 0.5710
+final loss: 1.9239
+final loss: 0.0996
+final loss: 0.5372
+final loss: 0.7073
+final loss: 0.2209
+final loss: 0.2616
+final loss: 1.0162
+final loss: 0.2025
+final loss: 0.2224
+final loss: 0.2077
+final loss: 0.2525
+final loss: 2.0877
+final loss: 0.0007
+final loss: 0.0202
+final loss: 0.0763
+final loss: 0.2072
+final loss: 0.3931
+final loss: 0.0206
+final loss: 0.2204
+final loss: 0.1218
+final loss: 2.0572
+final loss: 1.1602
+final loss: 0.0490
+final loss: 0.0005
+final loss: 0.1087
+final loss: 0.2393
+final loss: 0.0237
+final loss: 2.5922
+final loss: 2.4215
+final loss: 0.1574
+final loss: 0.0132
+final loss: 0.0747
+final loss: 0.0057
+final loss: 0.0517
+final loss: 1.3553
+final loss: 0.0620
+final loss: 2.5817
+final loss: 0.0686
+final loss: 0.0244
+final loss: 0.0027
+final loss: 0.1004
+Epoch [100/200], Loss: 0.0549
+final loss: 0.0549
+final loss: 0.2262
+final loss: 0.0075
+final loss: 0.0429
+final loss: 0.0177
+final loss: 0.0027
+final loss: 1.0275
+final loss: 0.0221
+final loss: 0.0146
+final loss: 0.0009
+final loss: 3.2904
+final loss: 2.3108
+final loss: 0.2671
+final loss: 0.0240
+final loss: 0.1294
+final loss: 0.0018
+final loss: 0.0054
+final loss: 0.2429
+final loss: 0.0087
+final loss: 0.0106
+final loss: 1.4197
+final loss: 1.9043
+final loss: 0.0088
+final loss: 0.0141
+final loss: 0.0560
+final loss: 2.2162
+final loss: 0.0000
+final loss: 0.0034
+final loss: 0.0624
+final loss: 0.7600
+final loss: 0.0163
+final loss: 0.0202
+final loss: 0.0001
+final loss: 0.0056
+final loss: 0.0194
+final loss: 1.6524
+final loss: 1.0693
+final loss: 0.1280
+final loss: 0.0014
+final loss: 0.0091
+final loss: 2.1717
+final loss: 0.0014
+final loss: 0.0850
+final loss: 0.0034
+final loss: 0.0647
+final loss: 2.3094
+final loss: 0.0115
+final loss: 0.0406
+final loss: 0.0052
+final loss: 0.0024
+final loss: 0.0068
+final loss: 0.0022
+final loss: 0.0057
+final loss: 0.0030
+final loss: 0.0004
+final loss: 0.0011
+final loss: 0.0010
+final loss: 0.6890
+final loss: 0.0102
+final loss: 0.0006
+final loss: 0.0015
+final loss: 0.0022
+final loss: 0.0045
+final loss: 0.0017
+final loss: 0.0008
+final loss: 0.1238
+final loss: 0.0002
+final loss: 0.0685
+final loss: 1.8087
+final loss: 0.0281
+final loss: 0.0012
+final loss: 1.0316
+final loss: 0.0004
+final loss: 0.0010
+final loss: 0.0004
+final loss: 0.0314
+final loss: 0.0039
+final loss: 1.2796
+final loss: 0.0001
+final loss: 0.0043
+final loss: 0.0224
+final loss: 2.5417
+final loss: 0.0029
+final loss: 0.0004
+final loss: 0.0015
+final loss: 0.0037
+final loss: 1.1387
+final loss: 0.0002
+final loss: 0.0004
+final loss: 0.0012
+final loss: 2.2023
+final loss: 0.8973
+final loss: 0.0030
+final loss: 2.3004
+final loss: 0.8720
+final loss: 0.0006
+final loss: 0.0005
+final loss: 0.0128
+final loss: 0.0010
+final loss: 0.0002
+INFO:     127.0.0.1:42240 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42242 - "GET /admin/config.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42252 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42266 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42268 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42270 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42288 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42290 - "GET /.env HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42292 - "POST / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42310 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42322 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42324 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42326 - "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42336 - "HEAD / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42338 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42340 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42342 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42344 - "HEAD / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42346 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42348 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42350 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42352 - "HEAD / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42354 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42356 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42366 - "POST / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42392 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42412 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42422 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42432 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42436 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42438 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42442 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42446 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42450 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42454 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42458 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42460 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42464 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42468 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42472 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42476 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42480 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42490 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42494 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42498 - "POST /data/train HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42514 - "POST /detect HTTP/1.0" 200 OK
+9650 6876
+final loss: 9.1647
+final loss: 8.9485
+INFO:     127.0.0.1:42522 - "POST /detect HTTP/1.0" 200 OK
+final loss: 8.5921
+INFO:     127.0.0.1:42526 - "POST /detect HTTP/1.0" 200 OK
+final loss: 8.3969
+INFO:     127.0.0.1:42528 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42530 - "POST /data/train HTTP/1.0" 200 OK
+final loss: 8.7458
+final loss: 8.6307
+final loss: 6.5658
+final loss: 6.6364
+INFO:     127.0.0.1:42536 - "POST /detect HTTP/1.0" 200 OK
+final loss: 8.3882
+INFO:     127.0.0.1:42540 - "POST /detect HTTP/1.0" 200 OK
+final loss: 6.7508
+final loss: 7.1604
+final loss: 7.1921
+INFO:     127.0.0.1:42542 - "POST /detect HTTP/1.0" 200 OK
+final loss: 7.1157
+INFO:     127.0.0.1:42544 - "POST /detect HTTP/1.0" 200 OK
+final loss: 5.8750
+final loss: 6.3158
+final loss: 5.8498
+final loss: 5.6795
+final loss: 4.5274
+final loss: 6.4396
+final loss: 5.3575
+final loss: 5.7949
+final loss: 5.1424
+final loss: 5.6786
+final loss: 4.2057
+final loss: 5.2291
+INFO:     127.0.0.1:42546 - "POST /detect HTTP/1.0" 200 OK
+final loss: 4.7023
+final loss: 4.6228
+final loss: 4.0581
+final loss: 5.4145
+final loss: 4.2992
+final loss: 4.0838
+final loss: 3.7491
+final loss: 2.6673
+final loss: 3.5211
+final loss: 4.9403
+final loss: 4.4988
+final loss: 3.8676
+final loss: 3.0131
+final loss: 2.5431
+final loss: 5.6941
+final loss: 4.4779
+final loss: 3.3378
+final loss: 2.7309
+final loss: 5.3723
+final loss: 3.2264
+final loss: 2.8638
+INFO:     127.0.0.1:42550 - "POST /detect HTTP/1.0" 200 OK
+final loss: 2.8836
+final loss: 3.7408
+final loss: 2.6452
+final loss: 2.5713
+final loss: 0.8925
+final loss: 2.9578
+INFO:     127.0.0.1:42554 - "POST /detect HTTP/1.0" 200 OK
+final loss: 2.1990
+final loss: 2.3862
+final loss: 1.5870
+final loss: 1.6598
+final loss: 3.7812
+final loss: 2.6812
+final loss: 2.6919
+final loss: 2.7942
+INFO:     127.0.0.1:42558 - "POST /detect HTTP/1.0" 200 OK
+final loss: 2.9493
+final loss: 2.3857
+final loss: 2.8742
+final loss: 2.1640
+final loss: 2.3765
+final loss: 1.2221
+final loss: 3.2398
+final loss: 2.3203
+final loss: 2.7081
+final loss: 2.8558
+final loss: 1.6815
+final loss: 1.2627
+final loss: 2.0000
+final loss: 3.8833
+final loss: 1.6410
+final loss: 3.5803
+final loss: 0.4502
+final loss: 2.2135
+final loss: 1.8405
+final loss: 2.8807
+final loss: 1.7963
+final loss: 1.9976
+final loss: 3.9500
+final loss: 2.5303
+final loss: 3.5014
+final loss: 1.5607
+final loss: 0.7478
+final loss: 2.0409
+final loss: 2.5711
+final loss: 2.8258
+final loss: 4.1718
+final loss: 1.9202
+final loss: 3.1993
+final loss: 3.3320
+final loss: 2.8479
+final loss: 1.1036
+final loss: 2.4859
+final loss: 2.9835
+final loss: 2.3295
+Epoch [100/200], Loss: 1.2571
+final loss: 1.2571
+final loss: 1.7495
+final loss: 2.6825
+final loss: 2.8794
+final loss: 2.4780
+final loss: 1.0622
+final loss: 1.4324
+final loss: 1.9581
+final loss: 3.3990
+final loss: 2.8153
+final loss: 1.2657
+final loss: 2.5016
+final loss: 1.0540
+final loss: 3.2666
+final loss: 4.3311
+final loss: 1.3179
+final loss: 1.3318
+final loss: 1.2117
+final loss: 2.6931
+final loss: 1.0304
+final loss: 2.1245
+final loss: 0.8373
+final loss: 3.1960
+final loss: 3.0271
+final loss: 0.9489
+final loss: 0.9482
+final loss: 3.0570
+final loss: 1.1416
+final loss: 0.7893
+final loss: 0.6550
+final loss: 0.1658
+final loss: 1.5307
+final loss: 4.9860
+final loss: 1.8551
+final loss: 2.0768
+final loss: 0.4970
+final loss: 1.2657
+final loss: 1.7222
+final loss: 2.6342
+final loss: 3.0559
+final loss: 1.3555
+final loss: 1.6267
+final loss: 1.0302
+final loss: 1.4735
+final loss: 1.9613
+final loss: 0.5541
+final loss: 1.6003
+final loss: 1.6026
+final loss: 3.7904
+final loss: 1.6424
+final loss: 0.3597
+final loss: 2.7720
+final loss: 1.9336
+final loss: 1.3417
+final loss: 2.4722
+final loss: 1.6453
+final loss: 0.7971
+final loss: 1.7214
+final loss: 2.3493
+final loss: 1.2643
+final loss: 0.9572
+final loss: 4.7584
+final loss: 0.4588
+final loss: 0.5048
+final loss: 3.0201
+final loss: 2.5440
+final loss: 0.8116
+final loss: 2.0439
+final loss: 2.4880
+final loss: 1.2209
+final loss: 0.9433
+final loss: 1.0123
+final loss: 2.8570
+final loss: 1.4749
+final loss: 2.1072
+final loss: 1.8827
+final loss: 1.6010
+final loss: 1.7783
+final loss: 1.4076
+final loss: 0.8709
+final loss: 1.4933
+final loss: 2.6262
+final loss: 1.5151
+final loss: 1.9400
+final loss: 1.8086
+INFO:     127.0.0.1:42562 - "POST /data/train HTTP/1.0" 200 OK
+final loss: 1.5827
+final loss: 2.1399
+final loss: 0.8341
+final loss: 0.0503
+final loss: 2.0256
+final loss: 0.2022
+final loss: 2.5210
+final loss: 0.0038
+final loss: 0.7737
+final loss: 1.1007
+final loss: 1.2572
+final loss: 1.0724
+final loss: 2.6025
+final loss: 1.9627
+final loss: 0.5338
+INFO:     127.0.0.1:42576 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42580 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42582 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42584 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42586 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42588 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42590 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42592 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42594 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42596 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42598 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42600 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42604 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42606 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42610 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42612 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42616 - "POST /data/train HTTP/1.0" 200 OK
+10262 7218
+final loss: 9.2599
+final loss: 8.7519
+final loss: 8.7345
+final loss: 8.3490
+final loss: 8.8714
+final loss: 8.1198
+final loss: 8.3226
+final loss: 7.6132
+final loss: 7.3188
+final loss: 6.8988
+final loss: 7.2721
+final loss: 8.3466
+final loss: 6.9869
+final loss: 7.6794
+final loss: 6.1227
+final loss: 6.3137
+final loss: 6.2136
+final loss: 6.2306
+final loss: 4.3727
+final loss: 7.7032
+final loss: 4.7407
+final loss: 4.9507
+final loss: 6.3133
+final loss: 4.9256
+final loss: 6.3067
+final loss: 5.3632
+final loss: 2.3770
+final loss: 3.9417
+final loss: 2.6657
+final loss: 5.8955
+final loss: 3.6416
+final loss: 5.6439
+final loss: 2.6716
+final loss: 1.7419
+final loss: 2.5504
+final loss: 1.3436
+final loss: 4.2587
+final loss: 5.7545
+final loss: 2.9552
+final loss: 3.0402
+final loss: 4.3464
+final loss: 4.4469
+final loss: 2.0913
+final loss: 4.4805
+final loss: 3.4355
+final loss: 3.5171
+final loss: 1.1387
+final loss: 4.5251
+final loss: 4.2582
+final loss: 3.9136
+final loss: 2.8913
+final loss: 3.8490
+final loss: 6.6097
+final loss: 2.4526
+final loss: 1.8737
+final loss: 3.4874
+final loss: 2.0145
+final loss: 2.3916
+final loss: 3.5962
+final loss: 3.9574
+final loss: 2.4268
+final loss: 3.4202
+final loss: 1.4272
+final loss: 1.9946
+final loss: 1.6820
+final loss: 4.0566
+final loss: 1.3628
+final loss: 1.5942
+final loss: 4.0192
+final loss: 1.2223
+final loss: 3.5353
+final loss: 2.2900
+final loss: 2.8602
+final loss: 0.7635
+final loss: 2.5798
+final loss: 1.8295
+final loss: 4.2430
+final loss: 0.5474
+final loss: 2.8488
+final loss: 2.6277
+final loss: 0.6100
+INFO:     127.0.0.1:42636 - "POST /Autodiscover/Autodiscover.xml HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42638 - "POST /api/jsonws/invoke HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42640 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42642 - "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+final loss: 3.7872
+INFO:     127.0.0.1:42644 - "GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42646 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42648 - "POST /mifs/.%3B/services/LogService HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42650 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42652 - "GET /console/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42654 - "GET /wp-content/plugins/wp-file-manager/readme.txt HTTP/1.0" 404 Not Found
+final loss: 1.9353
+INFO:     127.0.0.1:42656 - "GET /_ignition/execute-solution HTTP/1.0" 404 Not Found
+final loss: 2.7273
+final loss: 0.0528
+final loss: 4.6602
+final loss: 4.0489
+final loss: 3.0084
+final loss: 1.2846
+final loss: 1.1434
+final loss: 1.5008
+final loss: 3.9962
+final loss: 0.1616
+final loss: 1.9379
+final loss: 3.1354
+final loss: 0.1926
+final loss: 2.3031
+final loss: 1.5069
+final loss: 2.9670
+Epoch [100/200], Loss: 1.8226
+final loss: 1.8226
+final loss: 0.0990
+final loss: 2.6607
+final loss: 1.7161
+final loss: 2.1106
+final loss: 1.2758
+final loss: 2.5505
+final loss: 2.6658
+final loss: 2.9970
+final loss: 0.7301
+final loss: 1.6101
+final loss: 0.1619
+final loss: 1.5700
+final loss: 1.1955
+final loss: 1.5050
+final loss: 1.4159
+final loss: 2.5654
+final loss: 0.7192
+final loss: 2.6956
+final loss: 0.0317
+final loss: 2.1049
+final loss: 2.6282
+final loss: 1.8929
+final loss: 0.5623
+final loss: 1.0970
+final loss: 0.1901
+final loss: 3.6560
+final loss: 1.4471
+final loss: 0.8479
+final loss: 2.8489
+final loss: 1.0490
+final loss: 1.3889
+final loss: 2.9087
+final loss: 1.0371
+final loss: 1.5935
+final loss: 0.0265
+final loss: 0.0131
+final loss: 1.2003
+final loss: 1.3864
+final loss: 4.5292
+final loss: 0.4841
+final loss: 0.0135
+final loss: 3.4264
+final loss: 2.1282
+final loss: 2.7210
+final loss: 2.5094
+final loss: 0.6454
+final loss: 0.0190
+final loss: 0.4950
+final loss: 1.1672
+final loss: 3.6205
+final loss: 1.3640
+final loss: 1.0636
+final loss: 3.0805
+final loss: 3.9101
+final loss: 2.9209
+final loss: 1.6620
+final loss: 1.3350
+final loss: 2.5419
+final loss: 0.0131
+final loss: 3.0476
+final loss: 0.0015
+final loss: 3.0268
+final loss: 1.7976
+final loss: 2.2022
+final loss: 0.2465
+final loss: 0.3770
+final loss: 2.4837
+final loss: 0.4534
+final loss: 1.2690
+final loss: 1.7836
+final loss: 1.3577
+final loss: 2.2441
+final loss: 0.5408
+final loss: 0.0001
+final loss: 1.0177
+final loss: 0.9520
+final loss: 1.2696
+final loss: 3.0110
+final loss: 1.3763
+final loss: 1.9189
+final loss: 0.5608
+final loss: 0.6889
+final loss: 2.5561
+final loss: 1.2302
+final loss: 0.0100
+final loss: 3.9893
+final loss: 1.7230
+final loss: 1.2646
+final loss: 0.0074
+final loss: 0.0067
+final loss: 0.0057
+final loss: 2.7182
+final loss: 1.2700
+final loss: 2.9026
+final loss: 0.4921
+final loss: 1.7841
+final loss: 1.3888
+final loss: 2.3118
+final loss: 2.4384
+INFO:     127.0.0.1:42670 - "GET /actuator/health HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42672 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42676 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42678 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42680 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42682 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42684 - "GET /admin/config.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42704 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42706 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42708 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42712 - "GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42714 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42716 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42720 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42722 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42724 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42726 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42728 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42730 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42740 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42742 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42746 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42748 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42750 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42752 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42756 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42758 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42760 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42762 - "GET /owa/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42772 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42776 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42778 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42780 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42782 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42784 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42788 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42792 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42794 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42796 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42798 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42800 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42802 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42804 - "POST /data/train HTTP/1.0" 200 OK
+10262 7218
+final loss: 9.2599
+final loss: 8.7519
+final loss: 8.7345
+final loss: 8.3490
+final loss: 8.8714
+final loss: 8.1198
+final loss: 8.3226
+final loss: 7.6132
+final loss: 7.3188
+final loss: 6.8988
+final loss: 7.2721
+final loss: 8.3466
+final loss: 6.9869
+final loss: 7.6794
+final loss: 6.1227
+final loss: 6.3137
+final loss: 6.2136
+final loss: 6.2306
+final loss: 4.3727
+final loss: 7.7032
+final loss: 4.7407
+final loss: 4.9507
+final loss: 6.3133
+final loss: 4.9256
+final loss: 6.3067
+final loss: 5.3632
+final loss: 2.3770
+final loss: 3.9417
+final loss: 2.6657
+final loss: 5.8955
+final loss: 3.6416
+final loss: 5.6439
+final loss: 2.6716
+final loss: 1.7419
+final loss: 2.5504
+final loss: 1.3436
+final loss: 4.2587
+final loss: 5.7545
+INFO:     127.0.0.1:42824 - "GET / HTTP/1.0" 404 Not Found
+final loss: 2.9552
+final loss: 3.0402
+final loss: 4.3464
+final loss: 4.4469
+final loss: 2.0913
+final loss: 4.4805
+final loss: 3.4355
+final loss: 3.5171
+final loss: 1.1387
+final loss: 4.5251
+final loss: 4.2582
+final loss: 3.9136
+final loss: 2.8913
+final loss: 3.8490
+final loss: 6.6097
+final loss: 2.4526
+final loss: 1.8737
+final loss: 3.4874
+final loss: 2.0145
+final loss: 2.3916
+final loss: 3.5962
+final loss: 3.9574
+final loss: 2.4268
+final loss: 3.4202
+final loss: 1.4272
+final loss: 1.9946
+final loss: 1.6820
+final loss: 4.0566
+final loss: 1.3628
+final loss: 1.5942
+final loss: 4.0192
+final loss: 1.2223
+final loss: 3.5353
+final loss: 2.2900
+final loss: 2.8602
+final loss: 0.7635
+final loss: 2.5798
+final loss: 1.8295
+final loss: 4.2430
+final loss: 0.5474
+final loss: 2.8488
+final loss: 2.6277
+final loss: 0.6100
+final loss: 3.7872
+final loss: 1.9353
+final loss: 2.7273
+final loss: 0.0528
+final loss: 4.6602
+final loss: 4.0489
+final loss: 3.0084
+final loss: 1.2846
+final loss: 1.1434
+final loss: 1.5008
+final loss: 3.9962
+final loss: 0.1616
+final loss: 1.9379
+final loss: 3.1354
+final loss: 0.1926
+final loss: 2.3031
+final loss: 1.5069
+final loss: 2.9670
+Epoch [100/200], Loss: 1.8226
+final loss: 1.8226
+final loss: 0.0990
+final loss: 2.6607
+final loss: 1.7161
+final loss: 2.1106
+final loss: 1.2758
+final loss: 2.5505
+final loss: 2.6658
+final loss: 2.9970
+final loss: 0.7301
+final loss: 1.6101
+final loss: 0.1619
+final loss: 1.5700
+final loss: 1.1955
+final loss: 1.5050
+final loss: 1.4159
+final loss: 2.5654
+final loss: 0.7192
+final loss: 2.6956
+final loss: 0.0317
+final loss: 2.1049
+final loss: 2.6282
+final loss: 1.8929
+final loss: 0.5623
+final loss: 1.0970
+final loss: 0.1901
+final loss: 3.6560
+final loss: 1.4471
+final loss: 0.8479
+final loss: 2.8489
+final loss: 1.0490
+final loss: 1.3889
+final loss: 2.9087
+final loss: 1.0371
+final loss: 1.5935
+final loss: 0.0265
+final loss: 0.0131
+final loss: 1.2003
+final loss: 1.3864
+final loss: 4.5292
+final loss: 0.4841
+final loss: 0.0135
+final loss: 3.4264
+final loss: 2.1282
+final loss: 2.7210
+final loss: 2.5094
+final loss: 0.6454
+final loss: 0.0190
+final loss: 0.4950
+final loss: 1.1672
+final loss: 3.6205
+final loss: 1.3640
+final loss: 1.0636
+final loss: 3.0805
+final loss: 3.9101
+final loss: 2.9209
+final loss: 1.6620
+final loss: 1.3350
+final loss: 2.5419
+final loss: 0.0131
+final loss: 3.0476
+final loss: 0.0015
+final loss: 3.0268
+final loss: 1.7976
+final loss: 2.2022
+final loss: 0.2465
+final loss: 0.3770
+final loss: 2.4837
+final loss: 0.4534
+final loss: 1.2690
+final loss: 1.7836
+final loss: 1.3577
+final loss: 2.2441
+final loss: 0.5408
+final loss: 0.0001
+final loss: 1.0177
+final loss: 0.9520
+final loss: 1.2696
+final loss: 3.0110
+final loss: 1.3763
+final loss: 1.9189
+final loss: 0.5608
+final loss: 0.6889
+final loss: 2.5561
+final loss: 1.2302
+final loss: 0.0100
+final loss: 3.9893
+final loss: 1.7230
+final loss: 1.2646
+final loss: 0.0074
+final loss: 0.0067
+final loss: 0.0057
+final loss: 2.7182
+final loss: 1.2700
+final loss: 2.9026
+final loss: 0.4921
+final loss: 1.7841
+final loss: 1.3888
+final loss: 2.3118
+final loss: 2.4384
+INFO:     127.0.0.1:42830 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42834 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42838 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42842 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42846 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42848 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42850 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42852 - "GET /.well-known/security.txt HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42854 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42856 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42858 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42870 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:42874 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42894 - "GET /.env HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42896 - "POST / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42914 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42916 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42928 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42930 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42932 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42934 - "GET /.well-known/security.txt HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42936 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42938 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42940 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42958 - "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42960 - "POST /api/jsonws/invoke HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42962 - "GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42964 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42966 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42968 - "POST /mifs/.%3B/services/LogService HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42970 - "GET /console/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42972 - "POST /Autodiscover/Autodiscover.xml HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42974 - "GET /_ignition/execute-solution HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42976 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42978 - "GET /wp-content/plugins/wp-file-manager/readme.txt HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42980 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42982 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42992 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:42994 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43008 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43018 - "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43028 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43064 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43074 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43086 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43100 - "POST /data/train HTTP/1.0" 200 OK
+10830 7604
+final loss: 9.4814
+final loss: 8.8595
+final loss: 8.5002
+final loss: 8.9022
+final loss: 8.3460
+final loss: 8.9340
+final loss: 8.8026
+final loss: 7.1802
+final loss: 8.1099
+final loss: 7.4819
+final loss: 7.9892
+final loss: 7.2756
+final loss: 7.8229
+final loss: 6.6610
+final loss: 5.9765
+final loss: 7.2300
+final loss: 6.1197
+final loss: 6.7212
+final loss: 5.6970
+final loss: 6.1356
+final loss: 7.1905
+final loss: 5.6414
+final loss: 6.2802
+final loss: 6.5136
+final loss: 5.3980
+final loss: 4.5033
+final loss: 6.7645
+final loss: 5.0470
+final loss: 5.7988
+final loss: 6.6905
+final loss: 5.2200
+final loss: 4.7552
+final loss: 4.1200
+final loss: 3.7496
+final loss: 5.0288
+final loss: 4.9285
+final loss: 2.9238
+final loss: 6.0588
+final loss: 5.1709
+final loss: 6.0599
+final loss: 3.7621
+final loss: 6.3594
+final loss: 4.6716
+final loss: 3.7474
+final loss: 4.9797
+final loss: 3.8838
+final loss: 5.1208
+final loss: 3.9100
+final loss: 5.0233
+final loss: 3.7202
+final loss: 5.1981
+final loss: 4.2156
+final loss: 3.9520
+final loss: 3.5881
+final loss: 4.5366
+final loss: 4.4010
+final loss: 4.3040
+final loss: 3.9583
+final loss: 4.4588
+final loss: 4.7792
+final loss: 4.1278
+final loss: 1.0317
+final loss: 2.2644
+final loss: 3.4305
+final loss: 3.4608
+final loss: 3.2084
+final loss: 3.9795
+final loss: 3.9142
+final loss: 2.1816
+final loss: 1.7779
+final loss: 4.8032
+final loss: 3.1884
+final loss: 4.2454
+final loss: 2.1568
+final loss: 1.7613
+final loss: 2.8565
+final loss: 2.9673
+final loss: 2.0673
+final loss: 3.8249
+final loss: 5.2481
+final loss: 0.8826
+final loss: 2.4356
+final loss: 1.7135
+final loss: 3.6998
+final loss: 2.6255
+final loss: 3.6374
+final loss: 3.7846
+final loss: 4.6435
+final loss: 2.1491
+final loss: 1.0694
+final loss: 4.9419
+final loss: 1.3759
+final loss: 4.0532
+final loss: 2.6966
+final loss: 1.6250
+final loss: 2.9125
+final loss: 1.4557
+final loss: 3.2380
+final loss: 1.9056
+Epoch [100/200], Loss: 3.1862
+final loss: 3.1862
+final loss: 3.9217
+final loss: 2.0004
+final loss: 4.6738
+final loss: 0.7104
+final loss: 4.1903
+final loss: 2.4383
+final loss: 4.0655
+final loss: 1.4575
+final loss: 2.7493
+final loss: 1.8982
+final loss: 4.7835
+final loss: 1.4903
+final loss: 4.6727
+final loss: 1.6449
+final loss: 0.8530
+final loss: 1.8737
+final loss: 3.8717
+final loss: 1.7917
+final loss: 2.4928
+final loss: 2.2791
+final loss: 3.1962
+final loss: 1.6628
+final loss: 1.9273
+final loss: 2.5322
+final loss: 4.1839
+final loss: 1.7712
+final loss: 3.5780
+final loss: 2.2391
+final loss: 3.8891
+final loss: 3.5516
+final loss: 2.9308
+final loss: 1.4730
+final loss: 2.2630
+final loss: 0.7763
+final loss: 4.2701
+final loss: 3.1256
+final loss: 2.4409
+final loss: 3.5772
+final loss: 2.2750
+final loss: 2.3620
+final loss: 2.9917
+final loss: 2.3892
+final loss: 2.3021
+final loss: 2.8602
+final loss: 2.7180
+final loss: 2.1541
+final loss: 2.1765
+final loss: 2.5279
+final loss: 3.0784
+final loss: 4.6230
+final loss: 1.6110
+final loss: 1.9630
+final loss: 2.3604
+final loss: 1.5791
+final loss: 1.3903
+final loss: 2.0541
+final loss: 3.6321
+final loss: 2.8840
+final loss: 3.5832
+final loss: 2.5656
+final loss: 3.4139
+final loss: 1.8853
+final loss: 0.8293
+final loss: 1.1023
+final loss: 2.5958
+final loss: 4.0543
+final loss: 3.1663
+final loss: 1.2584
+final loss: 2.4815
+final loss: 0.7470
+final loss: 1.8745
+final loss: 2.8307
+final loss: 2.2674
+final loss: 4.5749
+final loss: 0.0519
+final loss: 3.9414
+final loss: 0.9854
+final loss: 2.2306
+final loss: 4.8652
+final loss: 1.3380
+final loss: 5.3586
+final loss: 0.5341
+final loss: 2.2152
+final loss: 0.0219
+final loss: 2.2014
+final loss: 1.4524
+final loss: 1.4670
+final loss: 1.3385
+final loss: 3.1535
+final loss: 2.3450
+final loss: 4.4203
+final loss: 3.4089
+final loss: 1.2857
+final loss: 3.9017
+final loss: 3.6916
+final loss: 1.3280
+final loss: 3.5646
+final loss: 1.2199
+final loss: 3.6300
+INFO:     127.0.0.1:43140 - "GET /actuator/health HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43142 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43144 - "POST /data/train HTTP/1.0" 200 OK
+Epoch [200/200], Loss: 0.0001
+final loss: 0.0001
+Model Saved
+10850 7619
+final loss: 9.2410
+final loss: 8.9784
+final loss: 8.5813
+final loss: 8.5477
+final loss: 8.6163
+final loss: 7.9207
+final loss: 7.5529
+final loss: 6.5982
+final loss: 6.3851
+final loss: 7.9312
+final loss: 5.9974
+final loss: 5.7089
+final loss: 2.7079
+final loss: 5.7637
+final loss: 5.9785
+final loss: 4.1265
+final loss: 3.8311
+final loss: 3.8494
+final loss: 5.1604
+final loss: 2.4665
+final loss: 6.1851
+final loss: 2.0927
+final loss: 3.3490
+final loss: 3.6430
+final loss: 3.0763
+final loss: 1.9644
+final loss: 1.1787
+final loss: 3.5135
+final loss: 2.4823
+final loss: 2.1762
+final loss: 2.9128
+final loss: 2.3773
+final loss: 1.6727
+final loss: 1.9027
+final loss: 1.4521
+final loss: 2.4682
+final loss: 0.9447
+final loss: 0.9682
+final loss: 1.4635
+final loss: 1.3697
+final loss: 1.8373
+final loss: 1.9013
+final loss: 0.6545
+final loss: 1.0982
+final loss: 0.2299
+final loss: 0.2162
+final loss: 0.4522
+final loss: 1.4275
+final loss: 1.6178
+final loss: 0.1560
+final loss: 0.6576
+final loss: 0.3885
+final loss: 0.6300
+final loss: 0.1287
+final loss: 0.1477
+final loss: 0.5928
+final loss: 0.0954
+final loss: 1.3416
+final loss: 0.8606
+final loss: 0.6100
+final loss: 0.4200
+final loss: 0.3249
+final loss: 0.0226
+final loss: 0.3234
+final loss: 0.0850
+final loss: 0.1177
+final loss: 0.0071
+final loss: 0.1858
+final loss: 0.1608
+final loss: 0.0383
+final loss: 0.1825
+final loss: 0.1962
+final loss: 0.0246
+final loss: 0.2135
+final loss: 0.1822
+final loss: 0.4871
+final loss: 0.2724
+final loss: 0.0262
+final loss: 0.0290
+final loss: 0.0261
+final loss: 0.2659
+final loss: 0.3763
+final loss: 0.1469
+final loss: 0.0167
+final loss: 0.0109
+final loss: 0.0200
+final loss: 0.1327
+final loss: 0.1305
+final loss: 0.0651
+final loss: 0.0045
+final loss: 0.0443
+final loss: 0.0839
+final loss: 0.0213
+final loss: 0.1301
+final loss: 0.0256
+final loss: 0.0008
+final loss: 0.0119
+final loss: 0.0308
+final loss: 0.0095
+Epoch [100/200], Loss: 0.0026
+final loss: 0.0026
+final loss: 0.0937
+final loss: 0.0119
+final loss: 0.0150
+final loss: 0.0703
+final loss: 0.0014
+final loss: 0.0113
+final loss: 0.0581
+final loss: 0.0009
+final loss: 0.0181
+final loss: 0.0068
+final loss: 0.0259
+final loss: 0.0388
+final loss: 0.0287
+final loss: 0.7857
+final loss: 0.0077
+final loss: 0.0080
+final loss: 0.0063
+final loss: 0.0000
+final loss: 0.0063
+final loss: 0.0049
+final loss: 0.0190
+final loss: 0.0150
+final loss: 0.0366
+final loss: 0.0433
+final loss: 0.0300
+final loss: 0.0014
+final loss: 0.0654
+final loss: 0.0048
+final loss: 0.4427
+final loss: 0.0119
+final loss: 0.0021
+final loss: 0.0015
+final loss: 0.0197
+final loss: 0.0006
+final loss: 0.1853
+final loss: 0.0003
+final loss: 0.0079
+final loss: 0.9540
+final loss: 0.0857
+final loss: 0.0069
+final loss: 0.0451
+final loss: 0.0280
+final loss: 0.0014
+final loss: 0.0134
+final loss: 0.0003
+final loss: 0.0051
+final loss: 0.0030
+final loss: 0.0006
+final loss: 0.0009
+final loss: 0.0017
+final loss: 0.0012
+final loss: 0.0037
+final loss: 0.0006
+final loss: 0.0018
+final loss: 0.0096
+final loss: 0.0384
+final loss: 0.0040
+final loss: 0.0003
+final loss: 0.0051
+final loss: 0.0004
+final loss: 0.0014
+final loss: 0.1554
+final loss: 0.0000
+final loss: 0.6663
+final loss: 0.1037
+final loss: 0.0322
+final loss: 0.0022
+final loss: 0.0001
+final loss: 0.0182
+final loss: 0.0002
+final loss: 0.0042
+final loss: 0.0029
+final loss: 0.0012
+final loss: 0.0004
+final loss: 0.0012
+final loss: 0.0018
+final loss: 0.0047
+final loss: 1.4934
+INFO:     127.0.0.1:43172 - "GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f HTTP/1.0" 404 Not Found
+final loss: 0.0000
+final loss: 0.0028
+final loss: 0.0017
+final loss: 0.0019
+final loss: 0.0007
+final loss: 0.0004
+final loss: 0.0003
+final loss: 0.0004
+final loss: 0.0442
+final loss: 0.0497
+final loss: 0.0049
+final loss: 0.0052
+final loss: 0.0002
+INFO:     127.0.0.1:43174 - "OPTIONS / HTTP/1.0" 404 Not Found
+final loss: 0.0000
+final loss: 0.0038
+final loss: 0.0004
+final loss: 0.0015
+final loss: 0.0000
+final loss: 0.0230
+final loss: 0.0000
+final loss: 0.0016
+INFO:     127.0.0.1:43192 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43194 - "POST /data/train HTTP/1.0" 200 OK
+Epoch [200/200], Loss: 0.0001
+final loss: 0.0001
+Model Saved
+10850 7619
+final loss: 9.2410
+final loss: 8.9784
+final loss: 8.5813
+final loss: 8.5477
+final loss: 8.6163
+final loss: 7.9207
+final loss: 7.5529
+final loss: 6.5982
+final loss: 6.3851
+final loss: 7.9312
+final loss: 5.9974
+final loss: 5.7089
+final loss: 2.7079
+final loss: 5.7637
+final loss: 5.9785
+final loss: 4.1265
+final loss: 3.8311
+final loss: 3.8494
+final loss: 5.1604
+final loss: 2.4665
+final loss: 6.1851
+final loss: 2.0927
+final loss: 3.3490
+final loss: 3.6430
+final loss: 3.0763
+final loss: 1.9644
+final loss: 1.1787
+final loss: 3.5135
+final loss: 2.4823
+final loss: 2.1762
+final loss: 2.9128
+final loss: 2.3773
+final loss: 1.6727
+final loss: 1.9027
+final loss: 1.4521
+final loss: 2.4682
+final loss: 0.9447
+final loss: 0.9682
+final loss: 1.4635
+final loss: 1.3697
+final loss: 1.8373
+final loss: 1.9013
+final loss: 0.6545
+final loss: 1.0982
+final loss: 0.2299
+final loss: 0.2162
+final loss: 0.4522
+final loss: 1.4275
+final loss: 1.6178
+final loss: 0.1560
+final loss: 0.6576
+final loss: 0.3885
+final loss: 0.6300
+final loss: 0.1287
+final loss: 0.1477
+final loss: 0.5928
+final loss: 0.0954
+final loss: 1.3416
+final loss: 0.8606
+final loss: 0.6100
+final loss: 0.4200
+final loss: 0.3249
+final loss: 0.0226
+final loss: 0.3234
+final loss: 0.0850
+final loss: 0.1177
+final loss: 0.0071
+final loss: 0.1858
+final loss: 0.1608
+final loss: 0.0383
+final loss: 0.1825
+final loss: 0.1962
+final loss: 0.0246
+final loss: 0.2135
+final loss: 0.1822
+final loss: 0.4871
+final loss: 0.2724
+final loss: 0.0262
+final loss: 0.0290
+final loss: 0.0261
+final loss: 0.2659
+final loss: 0.3763
+final loss: 0.1469
+final loss: 0.0167
+final loss: 0.0109
+final loss: 0.0200
+final loss: 0.1327
+final loss: 0.1305
+final loss: 0.0651
+final loss: 0.0045
+final loss: 0.0443
+final loss: 0.0839
+final loss: 0.0213
+final loss: 0.1301
+final loss: 0.0256
+final loss: 0.0008
+final loss: 0.0119
+final loss: 0.0308
+final loss: 0.0095
+Epoch [100/200], Loss: 0.0026
+final loss: 0.0026
+final loss: 0.0937
+final loss: 0.0119
+final loss: 0.0150
+final loss: 0.0703
+final loss: 0.0014
+final loss: 0.0113
+final loss: 0.0581
+final loss: 0.0009
+final loss: 0.0181
+final loss: 0.0068
+final loss: 0.0259
+final loss: 0.0388
+final loss: 0.0287
+final loss: 0.7857
+final loss: 0.0077
+final loss: 0.0080
+final loss: 0.0063
+final loss: 0.0000
+final loss: 0.0063
+final loss: 0.0049
+final loss: 0.0190
+final loss: 0.0150
+final loss: 0.0366
+final loss: 0.0433
+final loss: 0.0300
+final loss: 0.0014
+final loss: 0.0654
+final loss: 0.0048
+final loss: 0.4427
+final loss: 0.0119
+final loss: 0.0021
+final loss: 0.0015
+final loss: 0.0197
+final loss: 0.0006
+final loss: 0.1853
+final loss: 0.0003
+final loss: 0.0079
+final loss: 0.9540
+final loss: 0.0857
+final loss: 0.0069
+final loss: 0.0451
+final loss: 0.0280
+final loss: 0.0014
+final loss: 0.0134
+final loss: 0.0003
+final loss: 0.0051
+final loss: 0.0030
+final loss: 0.0006
+final loss: 0.0009
+final loss: 0.0017
+final loss: 0.0012
+final loss: 0.0037
+final loss: 0.0006
+final loss: 0.0018
+final loss: 0.0096
+final loss: 0.0384
+final loss: 0.0040
+final loss: 0.0003
+final loss: 0.0051
+final loss: 0.0004
+final loss: 0.0014
+final loss: 0.1554
+INFO:     127.0.0.1:43222 - "GET / HTTP/1.0" 404 Not Found
+final loss: 0.0000
+final loss: 0.6663
+final loss: 0.1037
+final loss: 0.0322
+INFO:     127.0.0.1:43224 - "GET /nmaplowercheck1625829208 HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43226 - "GET /evox/about HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43228 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43230 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43232 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43234 - "POST /sdk HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43236 - "GET /HNAP1 HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43238 - "GET / HTTP/1.0" 404 Not Found
+final loss: 0.0022
+final loss: 0.0001
+INFO:     127.0.0.1:43240 - "GET / HTTP/1.0" 404 Not Found
+final loss: 0.0182
+INFO:     127.0.0.1:43242 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+final loss: 0.0002
+final loss: 0.0042
+final loss: 0.0029
+final loss: 0.0012
+final loss: 0.0004
+final loss: 0.0012
+final loss: 0.0018
+final loss: 0.0047
+final loss: 1.4934
+final loss: 0.0000
+final loss: 0.0028
+final loss: 0.0017
+final loss: 0.0019
+final loss: 0.0007
+final loss: 0.0004
+final loss: 0.0003
+final loss: 0.0004
+final loss: 0.0442
+final loss: 0.0497
+final loss: 0.0049
+final loss: 0.0052
+final loss: 0.0002
+final loss: 0.0000
+final loss: 0.0038
+final loss: 0.0004
+final loss: 0.0015
+final loss: 0.0000
+final loss: 0.0230
+final loss: 0.0000
+final loss: 0.0016
+INFO:     127.0.0.1:43256 - "GET /owa/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43260 - "POST /data/train HTTP/1.0" 200 OK
+Epoch [200/200], Loss: 0.0001
+final loss: 0.0001
+Model Saved
+10850 7619
+final loss: 9.2410
+final loss: 8.9784
+final loss: 8.5813
+final loss: 8.5477
+final loss: 8.6163
+final loss: 7.9207
+final loss: 7.5529
+final loss: 6.5982
+final loss: 6.3851
+final loss: 7.9312
+final loss: 5.9974
+final loss: 5.7089
+final loss: 2.7079
+final loss: 5.7637
+final loss: 5.9785
+final loss: 4.1265
+final loss: 3.8311
+final loss: 3.8494
+final loss: 5.1604
+final loss: 2.4665
+final loss: 6.1851
+final loss: 2.0927
+final loss: 3.3490
+final loss: 3.6430
+final loss: 3.0763
+final loss: 1.9644
+final loss: 1.1787
+final loss: 3.5135
+final loss: 2.4823
+final loss: 2.1762
+final loss: 2.9128
+final loss: 2.3773
+final loss: 1.6727
+final loss: 1.9027
+final loss: 1.4521
+final loss: 2.4682
+final loss: 0.9447
+final loss: 0.9682
+final loss: 1.4635
+final loss: 1.3697
+final loss: 1.8373
+final loss: 1.9013
+final loss: 0.6545
+final loss: 1.0982
+final loss: 0.2299
+final loss: 0.2162
+final loss: 0.4522
+final loss: 1.4275
+final loss: 1.6178
+final loss: 0.1560
+final loss: 0.6576
+final loss: 0.3885
+final loss: 0.6300
+final loss: 0.1287
+final loss: 0.1477
+final loss: 0.5928
+final loss: 0.0954
+final loss: 1.3416
+final loss: 0.8606
+final loss: 0.6100
+final loss: 0.4200
+final loss: 0.3249
+final loss: 0.0226
+final loss: 0.3234
+final loss: 0.0850
+final loss: 0.1177
+final loss: 0.0071
+final loss: 0.1858
+final loss: 0.1608
+final loss: 0.0383
+final loss: 0.1825
+final loss: 0.1962
+final loss: 0.0246
+final loss: 0.2135
+final loss: 0.1822
+final loss: 0.4871
+final loss: 0.2724
+final loss: 0.0262
+final loss: 0.0290
+final loss: 0.0261
+final loss: 0.2659
+final loss: 0.3763
+final loss: 0.1469
+final loss: 0.0167
+final loss: 0.0109
+final loss: 0.0200
+final loss: 0.1327
+final loss: 0.1305
+final loss: 0.0651
+final loss: 0.0045
+final loss: 0.0443
+final loss: 0.0839
+final loss: 0.0213
+final loss: 0.1301
+final loss: 0.0256
+final loss: 0.0008
+final loss: 0.0119
+final loss: 0.0308
+final loss: 0.0095
+Epoch [100/200], Loss: 0.0026
+final loss: 0.0026
+final loss: 0.0937
+final loss: 0.0119
+final loss: 0.0150
+final loss: 0.0703
+final loss: 0.0014
+final loss: 0.0113
+final loss: 0.0581
+final loss: 0.0009
+final loss: 0.0181
+final loss: 0.0068
+final loss: 0.0259
+final loss: 0.0388
+final loss: 0.0287
+final loss: 0.7857
+final loss: 0.0077
+final loss: 0.0080
+final loss: 0.0063
+final loss: 0.0000
+final loss: 0.0063
+final loss: 0.0049
+final loss: 0.0190
+final loss: 0.0150
+final loss: 0.0366
+final loss: 0.0433
+INFO:     127.0.0.1:43288 - "POST /data/train HTTP/1.0" 200 OK
+final loss: 0.0300
+final loss: 0.0014
+INFO:     127.0.0.1:43294 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43298 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43300 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0654
+INFO:     127.0.0.1:43302 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43304 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43306 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43308 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0048
+INFO:     127.0.0.1:43310 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43312 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43314 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.4427
+INFO:     127.0.0.1:43316 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43318 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0119
+final loss: 0.0021
+final loss: 0.0015
+final loss: 0.0197
+INFO:     127.0.0.1:43320 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43324 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43326 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43328 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0006
+INFO:     127.0.0.1:43330 - "POST /data/train HTTP/1.0" 200 OK
+final loss: 0.1853
+final loss: 0.0003
+final loss: 0.0079
+final loss: 0.9540
+INFO:     127.0.0.1:43336 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0857
+final loss: 0.0069
+final loss: 0.0451
+final loss: 0.0280
+final loss: 0.0014
+final loss: 0.0134
+INFO:     127.0.0.1:43340 - "GET / HTTP/1.0" 404 Not Found
+final loss: 0.0003
+final loss: 0.0051
+final loss: 0.0030
+final loss: 0.0006
+final loss: 0.0009
+final loss: 0.0017
+final loss: 0.0012
+INFO:     127.0.0.1:43342 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43346 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43348 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0037
+INFO:     127.0.0.1:43350 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43352 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43354 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0006
+INFO:     127.0.0.1:43356 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43358 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43360 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0018
+INFO:     127.0.0.1:43362 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43364 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0096
+final loss: 0.0384
+final loss: 0.0040
+final loss: 0.0003
+final loss: 0.0051
+final loss: 0.0004
+final loss: 0.0014
+final loss: 0.1554
+final loss: 0.0000
+final loss: 0.6663
+final loss: 0.1037
+final loss: 0.0322
+final loss: 0.0022
+final loss: 0.0001
+final loss: 0.0182
+final loss: 0.0002
+final loss: 0.0042
+final loss: 0.0029
+final loss: 0.0012
+final loss: 0.0004
+final loss: 0.0012
+final loss: 0.0018
+final loss: 0.0047
+final loss: 1.4934
+final loss: 0.0000
+final loss: 0.0028
+final loss: 0.0017
+final loss: 0.0019
+final loss: 0.0007
+final loss: 0.0004
+final loss: 0.0003
+final loss: 0.0004
+final loss: 0.0442
+final loss: 0.0497
+final loss: 0.0049
+final loss: 0.0052
+final loss: 0.0002
+final loss: 0.0000
+final loss: 0.0038
+final loss: 0.0004
+final loss: 0.0015
+final loss: 0.0000
+final loss: 0.0230
+final loss: 0.0000
+final loss: 0.0016
+INFO:     127.0.0.1:43370 - "GET /.env HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43372 - "POST / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43382 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43410 - "POST /mifs/.%3B/services/LogService HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43412 - "GET /console/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43414 - "POST /Autodiscover/Autodiscover.xml HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43416 - "GET /_ignition/execute-solution HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43418 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43420 - "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43422 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43424 - "GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43426 - "GET /wp-content/plugins/wp-file-manager/readme.txt HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43428 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43430 - "POST /api/jsonws/invoke HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43440 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43478 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43480 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43490 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43492 - "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43510 - "GET /.env HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43512 - "POST / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43514 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43516 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43518 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43528 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43540 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43552 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43554 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43564 - "POST /data/train HTTP/1.0" 200 OK
+Epoch [200/200], Loss: 0.0001
+final loss: 0.0001
+Model Saved
+13848 9486
+final loss: 9.6841
+final loss: 9.0260
+final loss: 9.0472
+final loss: 9.0448
+final loss: 9.1681
+final loss: 8.1596
+final loss: 7.2589
+final loss: 7.0077
+final loss: 7.1762
+final loss: 6.2168
+final loss: 5.9666
+final loss: 5.9935
+final loss: 5.7713
+final loss: 5.9113
+final loss: 4.9669
+final loss: 5.6590
+final loss: 5.4140
+final loss: 3.9994
+final loss: 3.9297
+final loss: 4.1268
+final loss: 4.1163
+final loss: 3.9993
+final loss: 5.0873
+final loss: 4.2224
+final loss: 2.8650
+final loss: 3.1874
+final loss: 2.1947
+final loss: 3.4569
+final loss: 2.5456
+final loss: 2.5329
+final loss: 2.6987
+final loss: 3.4019
+final loss: 2.8410
+final loss: 2.9910
+final loss: 3.1853
+final loss: 2.0269
+final loss: 3.1109
+final loss: 2.4631
+final loss: 2.1811
+final loss: 3.4181
+final loss: 2.5485
+final loss: 2.3066
+final loss: 1.6188
+final loss: 1.9538
+final loss: 2.4877
+final loss: 1.2618
+final loss: 3.0993
+final loss: 1.9899
+final loss: 1.3312
+final loss: 2.4598
+final loss: 1.9899
+final loss: 1.8353
+final loss: 2.0295
+final loss: 0.5953
+final loss: 0.6971
+final loss: 0.8405
+final loss: 0.9310
+final loss: 0.8402
+final loss: 0.6681
+final loss: 1.2067
+INFO:     127.0.0.1:43592 - "GET / HTTP/1.0" 404 Not Found
+final loss: 1.4075
+final loss: 1.3012
+final loss: 0.8388
+INFO:     127.0.0.1:43594 - "GET / HTTP/1.0" 404 Not Found
+final loss: 1.1427
+final loss: 1.4422
+final loss: 0.4503
+final loss: 0.2082
+final loss: 0.2005
+final loss: 0.4061
+final loss: 0.3856
+final loss: 0.8453
+final loss: 1.4476
+final loss: 0.3207
+final loss: 0.8240
+final loss: 0.3439
+final loss: 1.8458
+final loss: 1.8626
+final loss: 1.1668
+final loss: 0.2368
+final loss: 0.0677
+final loss: 0.6661
+final loss: 0.5347
+final loss: 0.1740
+final loss: 0.4392
+final loss: 1.2948
+final loss: 0.5161
+final loss: 0.8549
+final loss: 0.5641
+final loss: 0.6385
+final loss: 0.2682
+final loss: 0.9222
+final loss: 0.1287
+final loss: 1.3529
+final loss: 0.8982
+final loss: 0.4659
+final loss: 0.3490
+final loss: 0.1085
+final loss: 0.0205
+final loss: 0.7707
+Epoch [100/200], Loss: 0.0662
+final loss: 0.0662
+final loss: 0.6690
+final loss: 0.0148
+final loss: 0.4730
+final loss: 1.8681
+final loss: 0.8824
+final loss: 0.0202
+final loss: 0.3580
+final loss: 0.0358
+final loss: 0.7808
+final loss: 0.6850
+final loss: 0.5075
+final loss: 1.6905
+final loss: 0.0873
+final loss: 0.4893
+final loss: 0.5414
+final loss: 0.0830
+final loss: 0.3741
+final loss: 0.1263
+final loss: 1.3110
+final loss: 0.5906
+final loss: 1.0227
+final loss: 0.0440
+final loss: 0.9067
+final loss: 0.2000
+final loss: 0.0177
+final loss: 0.6038
+final loss: 1.1790
+final loss: 0.4216
+final loss: 0.5979
+final loss: 0.5394
+final loss: 0.0213
+final loss: 0.5553
+final loss: 1.0051
+final loss: 0.8146
+final loss: 0.0119
+final loss: 0.2500
+final loss: 0.5269
+final loss: 0.0167
+final loss: 0.0132
+final loss: 0.0003
+final loss: 0.0063
+final loss: 0.4859
+final loss: 0.1455
+final loss: 0.3395
+final loss: 0.4765
+final loss: 0.2344
+final loss: 0.0043
+final loss: 0.5682
+final loss: 0.2448
+final loss: 0.0101
+final loss: 0.4518
+final loss: 0.4574
+final loss: 0.0020
+final loss: 1.4242
+final loss: 0.0538
+final loss: 0.0418
+final loss: 0.3354
+final loss: 0.0509
+final loss: 0.0003
+final loss: 0.0103
+final loss: 0.0034
+final loss: 0.8630
+final loss: 0.1737
+final loss: 0.0277
+final loss: 0.9726
+final loss: 0.6519
+final loss: 1.0411
+final loss: 0.0054
+final loss: 0.3350
+final loss: 0.4787
+final loss: 0.0110
+final loss: 0.8863
+final loss: 0.2287
+final loss: 0.0028
+final loss: 0.6164
+final loss: 0.4963
+final loss: 0.0046
+final loss: 0.0526
+final loss: 0.0021
+final loss: 0.2533
+final loss: 0.4689
+final loss: 0.0312
+final loss: 0.0045
+INFO:     127.0.0.1:43596 - "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43598 - "POST /api/jsonws/invoke HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43600 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43602 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43604 - "GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43606 - "POST /mifs/.%3B/services/LogService HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43608 - "GET /wp-content/plugins/wp-file-manager/readme.txt HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43610 - "GET /console/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43612 - "POST /Autodiscover/Autodiscover.xml HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43614 - "GET /_ignition/execute-solution HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43616 - "GET / HTTP/1.0" 404 Not Found
+final loss: 0.1685
+final loss: 0.0099
+final loss: 0.0055
+final loss: 0.0007
+final loss: 0.2128
+final loss: 0.0007
+final loss: 0.4792
+final loss: 0.1027
+final loss: 0.6937
+final loss: 0.6407
+final loss: 0.3000
+final loss: 0.0246
+final loss: 0.0010
+final loss: 0.0008
+final loss: 0.0746
+final loss: 0.8246
+INFO:     127.0.0.1:43642 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43644 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43646 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43648 - "POST /data/train HTTP/1.0" 200 OK
+Epoch [200/200], Loss: 0.9974
+final loss: 0.9974
+Model Saved
+13935 9546
+final loss: 9.7579
+final loss: 9.2644
+final loss: 8.8958
+final loss: 9.4938
+final loss: 8.2854
+final loss: 8.2751
+final loss: 6.2056
+final loss: 8.6804
+final loss: 8.7498
+final loss: 8.2613
+final loss: 7.7816
+final loss: 7.4622
+final loss: 4.2442
+final loss: 5.9685
+final loss: 8.0549
+final loss: 7.6599
+final loss: 6.7680
+final loss: 6.6191
+final loss: 7.4939
+final loss: 8.3291
+final loss: 7.1996
+final loss: 6.8208
+final loss: 6.5813
+final loss: 1.1875
+final loss: 5.5777
+final loss: 5.9655
+final loss: 5.6216
+final loss: 6.8623
+final loss: 2.9943
+final loss: 6.3331
+final loss: 4.2638
+final loss: 3.3357
+final loss: 4.8769
+final loss: 6.4421
+final loss: 8.7951
+final loss: 2.6153
+final loss: 3.4100
+final loss: 2.9507
+final loss: 6.0720
+final loss: 5.2844
+final loss: 5.3280
+final loss: 2.6491
+final loss: 4.5267
+final loss: 6.2710
+final loss: 2.6119
+final loss: 4.4188
+final loss: 5.5350
+final loss: 3.5583
+final loss: 1.8541
+final loss: 5.4820
+final loss: 3.4224
+final loss: 3.4629
+final loss: 2.5308
+final loss: 5.8915
+final loss: 4.1219
+final loss: 0.0272
+final loss: 7.0195
+final loss: 0.4746
+final loss: 3.8532
+final loss: 6.0241
+final loss: 0.9155
+final loss: 4.8442
+final loss: 8.5838
+final loss: 3.2141
+final loss: 2.6371
+final loss: 2.7375
+final loss: 3.7603
+final loss: 2.9473
+final loss: 5.3322
+final loss: 1.0378
+final loss: 3.4360
+final loss: 3.9735
+final loss: 4.5791
+final loss: 4.4216
+final loss: 3.1060
+final loss: 1.5227
+final loss: 3.6702
+final loss: 11.4808
+final loss: 2.2687
+final loss: 4.0109
+final loss: 2.7474
+final loss: 3.6351
+final loss: 3.8281
+final loss: 6.3467
+final loss: 2.2546
+final loss: 5.6461
+final loss: 5.4638
+final loss: 1.1239
+final loss: 2.5552
+final loss: 2.4616
+final loss: 2.3238
+final loss: 0.9794
+final loss: 2.1213
+final loss: 0.2876
+final loss: 0.4589
+final loss: 0.3490
+final loss: 1.4394
+final loss: 1.1994
+final loss: 2.8116
+Epoch [100/200], Loss: 3.0885
+final loss: 3.0885
+final loss: 0.9302
+final loss: 2.0384
+final loss: 0.1061
+final loss: 2.4066
+final loss: 2.0851
+final loss: 3.8703
+final loss: 2.0159
+final loss: 0.9965
+final loss: 2.2012
+final loss: 3.7766
+final loss: 3.3821
+final loss: 1.5578
+final loss: 3.1859
+final loss: 1.5489
+final loss: 4.6430
+final loss: 3.6437
+final loss: 0.2750
+final loss: 1.3934
+final loss: 3.7643
+final loss: 2.1886
+final loss: 2.9176
+final loss: 2.2834
+final loss: 2.3515
+final loss: 2.0742
+final loss: 7.7067
+final loss: 0.0228
+final loss: 0.9034
+final loss: 2.0240
+final loss: 3.0556
+final loss: 2.8701
+final loss: 3.3589
+final loss: 1.2756
+final loss: 3.9923
+final loss: 2.9715
+final loss: 2.6564
+final loss: 2.3160
+final loss: 2.2056
+final loss: 4.8215
+final loss: 3.6635
+final loss: 1.0148
+final loss: 2.2201
+final loss: 1.9370
+final loss: 2.9051
+final loss: 0.7890
+final loss: 3.0477
+final loss: 4.1228
+final loss: 2.5838
+final loss: 0.0148
+final loss: 0.7210
+final loss: 3.2098
+final loss: 2.1260
+final loss: 2.2576
+final loss: 3.4501
+final loss: 1.1003
+final loss: 0.2614
+final loss: 4.0799
+final loss: 0.1184
+final loss: 0.2757
+final loss: 3.8541
+final loss: 2.5627
+final loss: 2.2882
+final loss: 0.0003
+final loss: 4.2477
+final loss: 1.5722
+final loss: 2.4544
+final loss: 0.7521
+final loss: 2.0967
+final loss: 2.0000
+final loss: 1.6671
+final loss: 1.6680
+final loss: 1.3109
+final loss: 1.6005
+final loss: 2.6089
+final loss: 3.7911
+final loss: 0.0005
+final loss: 1.5546
+final loss: 4.4902
+final loss: 1.8309
+final loss: 4.7862
+final loss: 0.6666
+final loss: 3.6102
+final loss: 2.8145
+final loss: 2.3673
+final loss: 3.0640
+final loss: 0.6109
+final loss: 4.6716
+final loss: 2.8388
+final loss: 2.9620
+final loss: 2.3422
+final loss: 1.4153
+final loss: 2.3373
+final loss: 2.2521
+final loss: 0.0318
+final loss: 2.4773
+final loss: 0.6032
+final loss: 3.4517
+final loss: 0.2369
+final loss: 2.5410
+final loss: 0.0705
+INFO:     127.0.0.1:43698 - "GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43708 - "POST /data/train HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43724 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43728 - "POST /detect HTTP/1.0" 200 OK
+Epoch [200/200], Loss: 1.4300
+final loss: 1.4300
+Model Saved
+13935 9546
+INFO:     127.0.0.1:43736 - "POST /detect HTTP/1.0" 200 OK
+final loss: 9.9241
+INFO:     127.0.0.1:43738 - "POST /detect HTTP/1.0" 200 OK
+final loss: 9.2500
+INFO:     127.0.0.1:43740 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43742 - "POST /detect HTTP/1.0" 200 OK
+final loss: 9.7046
+final loss: 8.8696
+INFO:     127.0.0.1:43744 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43746 - "POST /detect HTTP/1.0" 200 OK
+final loss: 6.3823
+INFO:     127.0.0.1:43748 - "POST /detect HTTP/1.0" 200 OK
+final loss: 8.2594
+INFO:     127.0.0.1:43750 - "POST /detect HTTP/1.0" 200 OK
+final loss: 8.6071
+final loss: 8.3953
+final loss: 7.2434
+final loss: 5.7487
+final loss: 7.4168
+INFO:     127.0.0.1:43752 - "POST /detect HTTP/1.0" 200 OK
+final loss: 5.2771
+INFO:     127.0.0.1:43756 - "POST /detect HTTP/1.0" 200 OK
+final loss: 7.0626
+final loss: 6.4903
+final loss: 6.2487
+final loss: 6.4787
+final loss: 5.6705
+final loss: 5.3600
+final loss: 6.4498
+final loss: 5.5741
+final loss: 4.7974
+final loss: 5.0262
+final loss: 4.9287
+final loss: 4.5170
+final loss: 3.7708
+final loss: 5.9472
+final loss: 2.7548
+final loss: 5.9200
+final loss: 5.0093
+final loss: 1.7141
+final loss: 4.1357
+final loss: 4.8641
+final loss: 3.6980
+final loss: 2.5417
+final loss: 2.5702
+final loss: 3.6284
+final loss: 2.9814
+final loss: 1.8120
+final loss: 2.6227
+final loss: 3.7905
+final loss: 4.1379
+final loss: 4.0841
+final loss: 3.4533
+final loss: 3.0665
+final loss: 2.4540
+final loss: 2.0615
+final loss: 0.1242
+final loss: 1.2171
+final loss: 1.8633
+final loss: 1.2553
+final loss: 2.5533
+final loss: 0.6041
+final loss: 3.7236
+final loss: 2.0512
+final loss: 2.0580
+final loss: 1.8009
+final loss: 0.3471
+final loss: 1.8251
+final loss: 1.3743
+final loss: 1.6526
+final loss: 1.8702
+final loss: 1.6447
+final loss: 0.9674
+final loss: 0.4915
+final loss: 1.8940
+final loss: 2.2226
+final loss: 0.7029
+final loss: 2.1159
+final loss: 7.9594
+final loss: 2.2591
+final loss: 0.0353
+final loss: 1.8099
+final loss: 1.6993
+final loss: 1.3674
+final loss: 1.3764
+final loss: 0.3146
+final loss: 1.5731
+final loss: 3.0371
+final loss: 1.3776
+final loss: 0.7450
+final loss: 0.3521
+final loss: 0.1348
+final loss: 0.6035
+final loss: 0.1338
+final loss: 0.5136
+final loss: 1.0121
+final loss: 0.6984
+INFO:     127.0.0.1:43758 - "GET /actuator/health HTTP/1.0" 404 Not Found
+final loss: 0.2116
+final loss: 0.9220
+final loss: 0.6473
+final loss: 0.2867
+final loss: 0.4027
+final loss: 2.0571
+final loss: 0.2394
+final loss: 0.0099
+final loss: 2.1497
+final loss: 0.2772
+final loss: 1.3566
+final loss: 0.4737
+Epoch [100/200], Loss: 0.0000
+final loss: 0.0000
+final loss: 1.2179
+final loss: 1.0380
+final loss: 0.0238
+final loss: 0.3501
+final loss: 0.4454
+final loss: 0.2263
+final loss: 0.0011
+final loss: 0.7687
+final loss: 0.4178
+final loss: 0.0392
+final loss: 0.9652
+final loss: 0.2437
+final loss: 1.8383
+final loss: 0.7039
+final loss: 0.0005
+final loss: 0.0184
+final loss: 0.1089
+final loss: 1.7898
+final loss: 0.1699
+final loss: 1.8543
+final loss: 0.1677
+final loss: 0.1703
+final loss: 0.3844
+final loss: 0.2602
+final loss: 1.2584
+final loss: 2.5338
+final loss: 0.2175
+final loss: 0.3074
+final loss: 0.4105
+final loss: 0.1211
+final loss: 1.8413
+final loss: 0.0015
+final loss: 0.0140
+final loss: 0.3616
+final loss: 0.0561
+final loss: 0.0024
+final loss: 0.1367
+final loss: 0.0079
+final loss: 0.0026
+final loss: 0.0167
+final loss: 1.9092
+final loss: 0.1814
+final loss: 0.2875
+final loss: 1.3240
+final loss: 0.3218
+final loss: 0.0786
+final loss: 0.1243
+final loss: 0.1565
+final loss: 0.0255
+final loss: 0.0031
+final loss: 0.0177
+final loss: 0.0833
+final loss: 0.3166
+final loss: 0.0122
+final loss: 0.2318
+final loss: 0.0971
+final loss: 0.7190
+final loss: 0.0027
+final loss: 1.2725
+final loss: 0.0377
+final loss: 0.0143
+final loss: 0.1298
+final loss: 0.0037
+final loss: 0.0007
+final loss: 0.9577
+final loss: 0.0001
+final loss: 0.0059
+final loss: 0.0043
+final loss: 0.6117
+final loss: 0.0540
+final loss: 0.3466
+final loss: 0.0212
+final loss: 0.2324
+final loss: 0.7213
+final loss: 0.0004
+final loss: 0.0249
+final loss: 0.0002
+final loss: 1.1867
+final loss: 0.0107
+final loss: 0.0038
+final loss: 0.2039
+final loss: 0.0002
+final loss: 0.0025
+final loss: 0.0695
+final loss: 1.4372
+final loss: 0.0115
+final loss: 0.0195
+final loss: 0.0071
+final loss: 0.0012
+final loss: 0.1227
+final loss: 0.0010
+final loss: 0.6010
+final loss: 0.0050
+final loss: 0.2608
+final loss: 0.1794
+final loss: 0.1271
+final loss: 0.0352
+final loss: 0.0177
+final loss: 0.0011
+INFO:     127.0.0.1:43776 - "POST /data/train HTTP/1.0" 200 OK
+Epoch [200/200], Loss: 1.4300
+final loss: 1.4300
+Model Saved
+13935 9546
+final loss: 9.9241
+final loss: 9.2500
+final loss: 9.7046
+final loss: 8.8696
+final loss: 6.3823
+INFO:     127.0.0.1:43796 - "POST /detect HTTP/1.0" 200 OK
+final loss: 8.2594
+final loss: 8.6071
+final loss: 8.3953
+final loss: 7.2434
+final loss: 5.7487
+final loss: 7.4168
+final loss: 5.2771
+final loss: 7.0626
+final loss: 6.4903
+final loss: 6.2487
+final loss: 6.4787
+final loss: 5.6705
+final loss: 5.3600
+final loss: 6.4498
+final loss: 5.5741
+final loss: 4.7974
+final loss: 5.0262
+final loss: 4.9287
+final loss: 4.5170
+final loss: 3.7708
+final loss: 5.9472
+final loss: 2.7548
+final loss: 5.9200
+final loss: 5.0093
+final loss: 1.7141
+final loss: 4.1357
+final loss: 4.8641
+final loss: 3.6980
+final loss: 2.5417
+final loss: 2.5702
+final loss: 3.6284
+final loss: 2.9814
+final loss: 1.8120
+final loss: 2.6227
+final loss: 3.7905
+final loss: 4.1379
+final loss: 4.0841
+final loss: 3.4533
+final loss: 3.0665
+final loss: 2.4540
+final loss: 2.0615
+final loss: 0.1242
+final loss: 1.2171
+final loss: 1.8633
+final loss: 1.2553
+final loss: 2.5533
+final loss: 0.6041
+final loss: 3.7236
+final loss: 2.0512
+final loss: 2.0580
+final loss: 1.8009
+final loss: 0.3471
+final loss: 1.8251
+final loss: 1.3743
+final loss: 1.6526
+final loss: 1.8702
+final loss: 1.6447
+final loss: 0.9674
+final loss: 0.4915
+final loss: 1.8940
+final loss: 2.2226
+final loss: 0.7029
+final loss: 2.1159
+final loss: 7.9594
+final loss: 2.2591
+final loss: 0.0353
+final loss: 1.8099
+final loss: 1.6993
+final loss: 1.3674
+final loss: 1.3764
+final loss: 0.3146
+final loss: 1.5731
+final loss: 3.0371
+final loss: 1.3776
+final loss: 0.7450
+final loss: 0.3521
+final loss: 0.1348
+final loss: 0.6035
+final loss: 0.1338
+final loss: 0.5136
+final loss: 1.0121
+final loss: 0.6984
+final loss: 0.2116
+final loss: 0.9220
+final loss: 0.6473
+final loss: 0.2867
+final loss: 0.4027
+final loss: 2.0571
+final loss: 0.2394
+final loss: 0.0099
+final loss: 2.1497
+final loss: 0.2772
+final loss: 1.3566
+final loss: 0.4737
+Epoch [100/200], Loss: 0.0000
+final loss: 0.0000
+final loss: 1.2179
+final loss: 1.0380
+INFO:     127.0.0.1:43800 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0238
+INFO:     127.0.0.1:43804 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.3501
+final loss: 0.4454
+final loss: 0.2263
+final loss: 0.0011
+final loss: 0.7687
+final loss: 0.4178
+final loss: 0.0392
+final loss: 0.9652
+final loss: 0.2437
+final loss: 1.8383
+final loss: 0.7039
+final loss: 0.0005
+final loss: 0.0184
+final loss: 0.1089
+final loss: 1.7898
+final loss: 0.1699
+final loss: 1.8543
+final loss: 0.1677
+final loss: 0.1703
+final loss: 0.3844
+final loss: 0.2602
+final loss: 1.2584
+final loss: 2.5338
+INFO:     127.0.0.1:43806 - "POST /data/train HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43812 - "POST /data/train HTTP/1.0" 200 OK
+final loss: 0.2175
+INFO:     127.0.0.1:43818 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43822 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.3074
+final loss: 0.4105
+INFO:     127.0.0.1:43824 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1211
+INFO:     127.0.0.1:43826 - "POST /detect HTTP/1.0" 200 OK
+final loss: 1.8413
+INFO:     127.0.0.1:43828 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0015
+INFO:     127.0.0.1:43830 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0140
+INFO:     127.0.0.1:43832 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.3616
+INFO:     127.0.0.1:43834 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0561
+final loss: 0.0024
+INFO:     127.0.0.1:43836 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1367
+INFO:     127.0.0.1:43840 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0079
+final loss: 0.0026
+INFO:     127.0.0.1:43842 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43844 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0167
+final loss: 1.9092
+INFO:     127.0.0.1:43846 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1814
+final loss: 0.2875
+final loss: 1.3240
+final loss: 0.3218
+INFO:     127.0.0.1:43850 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0786
+INFO:     127.0.0.1:43854 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1243
+INFO:     127.0.0.1:43856 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1565
+final loss: 0.0255
+INFO:     127.0.0.1:43858 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43862 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0031
+INFO:     127.0.0.1:43864 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0177
+INFO:     127.0.0.1:43866 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0833
+final loss: 0.3166
+final loss: 0.0122
+INFO:     127.0.0.1:43868 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43872 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.2318
+INFO:     127.0.0.1:43874 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43876 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0971
+final loss: 0.7190
+INFO:     127.0.0.1:43878 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0027
+final loss: 1.2725
+INFO:     127.0.0.1:43882 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0377
+INFO:     127.0.0.1:43884 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0143
+INFO:     127.0.0.1:43888 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.1298
+INFO:     127.0.0.1:43890 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0037
+INFO:     127.0.0.1:43892 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43894 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0007
+final loss: 0.9577
+INFO:     127.0.0.1:43896 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0001
+INFO:     127.0.0.1:43898 - "POST /detect HTTP/1.0" 200 OK
+final loss: 0.0059
+final loss: 0.0043
+final loss: 0.6117
+final loss: 0.0540
+final loss: 0.3466
+final loss: 0.0212
+final loss: 0.2324
+final loss: 0.7213
+final loss: 0.0004
+final loss: 0.0249
+final loss: 0.0002
+final loss: 1.1867
+final loss: 0.0107
+final loss: 0.0038
+final loss: 0.2039
+final loss: 0.0002
+final loss: 0.0025
+final loss: 0.0695
+final loss: 1.4372
+final loss: 0.0115
+final loss: 0.0195
+final loss: 0.0071
+final loss: 0.0012
+final loss: 0.1227
+final loss: 0.0010
+final loss: 0.6010
+final loss: 0.0050
+final loss: 0.2608
+final loss: 0.1794
+final loss: 0.1271
+final loss: 0.0352
+final loss: 0.0177
+final loss: 0.0011
+INFO:     127.0.0.1:43912 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43924 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43928 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43930 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43932 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43934 - "GET /news/stake-based-voting/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43936 - "GET /owa/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43938 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43948 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43952 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43954 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43956 - "POST /detect HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43960 - "GET /.env HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43962 - "POST / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43980 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44000 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44002 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44020 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44022 - "GET /.env HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44024 - "POST / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44046 - "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44056 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44066 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44080 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44116 - "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44118 - "GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44120 - "GET /console/ HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44122 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44124 - "POST /Autodiscover/Autodiscover.xml HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44126 - "GET /_ignition/execute-solution HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44128 - "POST /api/jsonws/invoke HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44130 - "GET / HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44132 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44134 - "POST /mifs/.%3B/services/LogService HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44136 - "GET /wp-content/plugins/wp-file-manager/readme.txt HTTP/1.0" 404 Not Found
+INFO:     Started server process [5533]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
