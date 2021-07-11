@@ -4502,3 +4502,211 @@ INFO:     Started server process [5533]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:44306 - "POST /detect/HHpoker HTTP/1.0" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 215, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 149, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./main.py", line 102, in getintentresponse
+    data = torch.load(FILE)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'models/${game}.pth'
+INFO:     127.0.0.1:44308 - "POST /detect/HHpoker HTTP/1.0" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 215, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 149, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./main.py", line 102, in getintentresponse
+    data = torch.load(FILE)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'models/${game}.pth'
+INFO:     127.0.0.1:44310 - "POST /detect/HHpoker HTTP/1.0" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 215, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/routing.py", line 149, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./main.py", line 102, in getintentresponse
+    data = torch.load(FILE)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'models/${game}.pth'
+INFO:     127.0.0.1:44316 - "POST /data/train/HHpoker HTTP/1.0" 200 OK
+INFO:     127.0.0.1:44332 - "POST /data/train/%E6%B8%94%E4%BA%BA%E7%A0%81%E5%A4%B4 HTTP/1.0" 200 OK
+INFO:     127.0.0.1:44338 - "POST /data/train HTTP/1.0" 200 OK
+7206 4493
+Epoch [100/200], Loss: 0.6945
+Epoch [200/200], Loss: 0.0002
+Model Saved
+INFO:     127.0.0.1:44352 - "POST /data/train/%E8%81%9A%E5%90%88 HTTP/1.0" 200 OK
+5881 4366
+INFO:     127.0.0.1:44372 - "POST /detect/HHpoker HTTP/1.0" 200 OK
+Epoch [100/200], Loss: 1.9462
+Epoch [200/200], Loss: 1.8928
+Model Saved
+INFO:     127.0.0.1:44424 - "POST /data/train/%E6%98%8E%E6%98%9F%E5%A8%B1%E4%B9%90 HTTP/1.0" 200 OK
+835 573
+Epoch [100/200], Loss: 0.3982
+Epoch [200/200], Loss: 0.0027
+Model Saved
+INFO:     127.0.0.1:44448 - "POST /data/train/%E6%B8%94%E4%BA%BA%E7%A0%81%E5%A4%B4 HTTP/1.0" 200 OK
+758 557
+Epoch [100/200], Loss: 1.5915
+Epoch [200/200], Loss: 0.0566
+Model Saved
+INFO:     127.0.0.1:44472 - "POST /data/train/%E5%BE%B7%E5%B7%9E%E6%8E%A8%E5%B9%BF HTTP/1.0" 200 OK
+1438 962
+Epoch [100/200], Loss: 0.0194
+Epoch [200/200], Loss: 0.0000
+Model Saved
+INFO:     127.0.0.1:44496 - "POST /data/train HTTP/1.0" 200 OK
+16183 11111
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/middleware/cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/routing.py", line 55, in app
+    await response(scope, receive, send)
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/responses.py", line 146, in __call__
+    await self.background()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/background.py", line 35, in __call__
+    await task()
+  File "/home/ubuntu/ai/aienv/lib/python3.6/site-packages/starlette/background.py", line 18, in __call__
+    await self.func(*self.args, **self.kwargs)
+  File "./main.py", line 82, in start_cpu_bound_task
+    jobs[uid].result = await run_in_process(train_data, mydict)
+  File "./main.py", line 78, in run_in_process
+    return await loop.run_in_executor(app.state.executor, fn, *args)  # wait and return result
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+INFO:     Shutting down
+INFO:     Finished server process [5533]
+INFO:     Started server process [28818]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:44572 - "POST /data/train/%E5%BE%B7%E5%B7%9E%E6%8E%A8%E5%B9%BF1 HTTP/1.0" 200 OK
+INFO:     127.0.0.1:44582 - "POST /telegram/sentotp HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:44594 - "POST /telegram/sentotp HTTP/1.0" 404 Not Found
+INFO:     Started server process [7812]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)

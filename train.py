@@ -153,7 +153,7 @@ def train_data_game(game,training_id):
     client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
     db = client['aipigeondb']
     collection = db['intentdata']
-    data = collection.find({'game':game})
+    data = collection.find({'game':str(game)})
     for count,intent in enumerate(data):
         if 'intent' in intent and 'question' in intent and 'answer' in intent:
             tag = intent['answer']
@@ -234,7 +234,8 @@ def train_data_game(game,training_id):
     "tags": tags
     }
 
-    FILE = "/home/ubuntu/ai/models/${game}.pth"
+    filename = game + '.pth'
+    FILE = "/home/ubuntu/ai/models/" + filename
     client = MongoClient('mongodb://admin:Aipigeon123@ec2-54-91-210-83.compute-1.amazonaws.com:27017/admin?authSource=admin',connect = False)
     db = client['aipigeondb']
     collection = db['traininghistory']
